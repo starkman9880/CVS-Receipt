@@ -1,0 +1,1931 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+	
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting" />
+<meta name="format-detection" content="telephone=no"/>
+<title>CVS</title>
+    
+    
+<!-- RESETS -->
+<style type="text/css">
+	:root {
+		color-scheme: light dark;
+		supported-color-schemes: light dark;
+		}
+	@media (prefers-color-scheme: dark ) {
+	  /* Shows Dark Mode-Only Content, Like Images */
+
+   
+  /* Custom Dark Mode Font Colors */
+
+		.btn_fontcc0000 {
+            color: #cc0000 !important;
+            border: none !important;
+            padding:12px 26px !important;
+			}
+        .btn_fontffffff {
+            color: #ffffff !important;
+            border: #000000 !important;
+			}
+
+/* Custom Dark Mode Background Color */
+
+ 
+/* Custom Dark Mode Font Colors */
+
+/* Custom Dark Mode Text Link Color */
+[data-ogsc].btn_fontcc0000 {
+            color: #cc0000 !important;
+            border: none !important;
+            padding:12px 26px !important;
+			}
+        
+
+[data-ogsc].btn_fontffffff {
+				color: #ffffff !important;
+            border: #000000 !important;
+			}
+}
+	
+    html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; box-sizing: border-box;}
+    body{ padding:0; margin:0; width:100%; margin-left:0px !important; margin-right:0px !important; }
+    table th { margin:0 !important; padding:0 !important; vertical-align:top !important; font-weight: normal !important; }
+    v\:* { behavior: url(#default#VML); display:block;}
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; }
+    .ExternalClass * { line-height:100%; }
+</style>
+<!-- /RESETS -->
+
+<style type="text/css">
+@font-face {font-family:'CVSHealthSansBeta-Thin'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Thin'), local('CVSHealthSansBeta-Thin'),url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099954/ORIGINAL.woff2') format('woff2'),url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099632/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099985/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-ThinItalic'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-ThinItalic'), local('CVSHealthSansBeta-ThinItalic'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099956/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099631/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099986/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-Light'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Light'), local('CVSHealthSansBeta-Light'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099945/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099630/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099980/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-LightItalic'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-LightItalic'), local('CVSHealthSansBeta-LightItalic'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099946/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099628/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099981/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-Regular'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Regular'), local('CVSHealthSansBeta-Regular'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099952/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099629/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099984/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-Italic'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Italic'), local('CVSHealthSansBeta-Italic'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099942/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099627/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099979/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-Bold'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Bold'), local('CVSHealthSansBeta-Bold'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099935/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099626/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099975/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-BoldItalic'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-BoldItalic'), local('CVSHealthSansBeta-BoldItalic'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099936/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099625/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099976/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-MediumItalic'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-MediumItalic'), local('CVSHealthSansBeta-MediumItalic'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099950/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099622/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099983/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-Black'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Black'), local('CVSHealthSansBeta-Black'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099938/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099623/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099977/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-Medium'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Medium'), local('CVSHealthSansBeta-Medium'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099948/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099624/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099982/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-BlackItalic'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-BlackItalic'), local('CVSHealthSansBeta-BlackItalic'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099940/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099621/ORIGINAL.woff') format('woff'),url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099978/ORIGINAL.ttf') format('truetype');}
+</style>
+
+<style type="text/css">
+   u ~ div .bold{ font-weight: bold !important; }
+</style>
+
+<style type="text/css">
+*[class].gmailfix { display:none; display:none !important; }
+table th { margin:0 !important; padding:0 !important; vertical-align:top !important; }
+body { width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }
+html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none;  }
+v:* { behavior: url(#default#VML); display: block; }
+a[href^="x-apple-data-detectors:"] { color: inherit; text-decoration: inherit; }
+.ReadMsgBody { width: 100%; }
+.ExternalClass { width: 100%; }
+.ExternalClass * { line-height: 100%; }
+.lhfix { mso-line-height-rule: exactly !important; }
+[class="x_bold"] { font-weight: bold !important; }
+u ~ div .bold{ font-weight: bold !important; }
+@-ms-viewport { width: device-width; }
+.appleLinksBlack a { text-decoration:none !important; }
+.appleLinksBlack a { color:#000000 !important; }
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+</style>
+
+<style type="text/css">
+@media yahoo { .bold { font-weight: bold !important;} }	
+</style>
+
+<style type="text/css">
+a {color: inherit; text-decoration: none;}
+
+h1, h2, h3, h4, h5, h6, p {margin: 0px; padding: 0px; border: 0px;}
+.navigation {font-size: 12px; line-height: 16px; font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Headline_Max {font-size: 80px; line-height: 80px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif;}
+.Headline_Largest {font-size: 64px; line-height: 64px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif;}
+.Headline_Large {font-size: 48px; line-height: 48px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif;}
+.Headline {font-size: 40px; line-height: 44px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif;}
+.Headline_Small {font-size: 32px; line-height: 36px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif;}
+.Headline_Smallest {font-size: 24px; line-height: 28px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif;}
+.Body_copy_large {font-size: 20px; line-height: 24px; font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Body_copy_large_bold {font-size: 20px; line-height: 24px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Body_copy {font-size: 16px; line-height: 24px; font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Body_copy_bold {font-size: 16px; line-height: 24px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Legal {font-size: 12px; line-height: 20px; font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Legal_bold {font-size: 12px; line-height: 20px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Footer_copy {font-size: 12px; line-height: 20px; font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Footer_link {font-size: 16px; line-height: 24px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Rescue_link {font-size: 12px; line-height: 20px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Primary_Red_Button {font-size:16px; line-height:18px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; text-decoration: none; height: 45px; background-color: #cc0000; text-align: center; color: #ffffff;}
+.Secondary_Red_Button {font-size:16px; line-height:18px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; text-decoration: none; height: 41px; background-color: #cc0000; text-align: center; color: #ffffff;}
+.Primary_White_Button {font-size:16px; line-height:18px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; text-decoration: none; height: 45px; background-color: #ffffff; text-align: center; color: #cc0000;}
+.Secondary_White_Button {font-size:16px; line-height:18px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; text-decoration: none; height: 41px; background-color: #ffffff; text-align: center; color: #cc0000;}
+.sup {font-size: 10px; line-height: 16px; font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: 400;}
+</style>
+
+<style type="text/css">
+.Headline {margin-top: -10px !important;padding-bottom: 10px !important;}
+.Headline_Large_Desktop {margin-top: -10px !important;padding-bottom: 10px !important;}
+@-moz-document url-prefix() {.Headline_coupon {margin-top: 0px !important;padding-bottom: 0px !important;}}
+@-moz-document url-prefix() {.Headline_Large_Desktop {margin-top: 0px !important;padding-bottom: 0px !important;}}
+</style>
+
+<style type="text/css">
+@media screen and (max-width: 600px){
+/*Mobile Text Styles*/
+.Headline_Max {font-size: 48px !important; line-height: 48px !important;}
+.Headline_Largest {font-size: 48px !important; line-height: 48px !important;}
+.Headline_Large {font-size: 40px !important; line-height: 44px !important;}
+.Headline {font-size: 32px !important; line-height: 36px !important;}
+.Headline_Small {font-size: 24px !important; line-height: 28px !important;}
+.Headline_Smallest {font-size: 20px !important; line-height: 24px !important;}
+
+/*General*/
+.hide, div.hide { display:none !important; }.block { display:block !important; }.show,div.show {display: block !important; width: auto !important; overflow: visible !important; float: none !important; max-height: inherit !important; line-height: inherit !important;}.aligncenter{ text-align:center !important; }.alignleft { text-align:left !important; }.alignright { text-align:right !important; }.hauto{ height:auto !important; }.width320{ width:320px !important; }.inline{ display: inline !important; }.bggray{ background-color: #F2F2F2 !important; }
+.width10{ width:10px !important; }.width20{ width:20px !important; }.width30{ width:30px !important; }.width40{ width:40px !important; }.width100{ width:100px !important; }.width110{ width:110px !important; }.width115{ width:115px !important; }.width135{ width:135px !important; }.width140{ width:140px !important; }.width145{ width:145px !important; }.width155{ width:155px !important; }.width160{ width:160px !important; }.width180{ width:180px !important; }.width194{ width:194px !important; }.width200{ width:200px !important; }.width220{ width:220px !important; }.width230{ width:230px !important; }.width234{ width:234px !important; }.width238{ width:238px !important; }.width240{ width:240px !important; }.width260{ width:260px !important; }.width280{ width:280px !important; }.width300{ width:300px !important; }.width310{ width:310px !important; }
+.hauto{ height:auto !important; }.hframebg{ height:555px !important; }.hframebox{ height:475px !important; }.hframecouponbg{ height:492px !important; }.hframecouponboxout{ height:412px !important; }.hframecouponboxin{ height:392px !important; }.hsecframebg{ height:371px !important; }.hsecframebox{ height:451px !important; }.height1{ height:1px !important; }.height2{ height:2px !important; }.height10{ height:10px !important; }.height70{ height:70px !important; }.height73{ height:73px !important; }.height100{ height:100px !important; }.height110{ height:110px !important; }.height120{ height:120px !important; }.height177{ height:177px !important; }.height190{ height:190px !important; }.height200{ height:200px !important; }.height222{ height:222px !important; }.height240{ height:240px !important; }.height371{ height:371px !important; }.height392{ height:392px !important; }.height412{ height:412px !important; }.height451{ height:451px !important; }.height455{ height:455px !important; }.height475{ height:475px !important; }.height492{ height:492px !important; }.height555{ height:555px !important; }
+.pad16{ padding-top: 15px !important; padding-bottom: 14px !important; }.lmargin5{ margin-left: 5px !important; }.rmargin5{ margin-right: 5px !important; }.font20{ font-size: 20px !important; }.font24{ font-size: 24px !important; }.font32{ font-size: 32px !important; }.font40{ font-size: 40px !important; }.font48{ font-size: 48px !important; }.lh10{ line-height: 10px !important; }.lh20{ line-height: 20px !important; }.lh24{ line-height: 24px !important; }.lh28{ line-height: 28px !important; }.lh30{ line-height: 30px !important; }.lh36{ line-height: 36px !important; }.lh40{ line-height: 40px !important; }.lh44{ line-height: 44px !important; }.lh48{ line-height: 48px !important; }
+
+}
+    
+.footersup {font-size: 10px; vertical-align: 4px; line-height: 0;}
+
+.footersup2 {font-size: 10px; vertical-align: 4px; line-height: 0;}
+</style>
+
+<!--[if (gte mso 9)|(IE)]>
+<xml>
+<o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<style type="text/css"> 
+div, td, span, a { font-family: Helvetica, Arial, sans-serif !important; mso-line-height-rule: exactly !important; }
+.lhfix{ mso-line-height-rule: exactly;}
+.bold {font-weight:bold !important;}
+</style>
+<![endif]-->
+    
+<!-- CTA --> 
+<!--[if (gte mso 9)|(IE)]>
+	<style type="text/css">
+		.btn_fontcc0000 { padding:12px 26px !important; }
+	</style>
+<![endif]-->
+
+
+
+	
+</head>
+
+<body style="width: 100%; background-color: #F2F2F2; margin: 0; padding: 0;"><table cellpadding="0" cellspacing="0" style="border: 0px; padding: 0px; margin: 0px; position: absolute; display: none; float: left">
+<tr>
+<td height="1" style="font-size: 1px; line-height: 1px; padding: 0px;">
+<img src="https://pharmacy.cvs.com/pub/as?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXHkMX%3Dw&_ei_=E-2JDDJIA21rx1wcJovCl-BHZ7PphnNXmzECWAvuyGVpxJBAWjZLI5diiZBckD77vGJl3AN0W4pX4pO03tOYmTF6qZDzANl1u4ZHoMxmJ3gJmwg7U6815n-3uElfd9PmTwlzERgZy2qHgRB00izIQSggc5wPAb-2SL-eshbPcUNJq9b3nrxzDOphL0Wl8slpPc-rxyoVjo2slq11xdPcppwjGNxlmZqeYuLNsPtgMSpLAs27Pgo0vM."></img>
+</td>
+</tr>
+</table>
+
+	<div style="display: none; max-height: 0px; overflow: hidden;">
+        You have deals inside! Don't miss out.
+    </div>
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+		&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+		&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+	<!-- END: HIDDEN PREHEADER -->
+<center>
+
+<!-- Container -->
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td width="100%" align="center" valign="top" bgcolor="#F2F2F2">
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320"><tr><td align="center" bgcolor="#F2F2F2">
+
+
+
+
+	
+
+
+    
+        
+        
+        
+        
+        <!-- CRM campaigns, standard HEADER module -->
+        
+ 
+
+<!-- HEADER - Non-Member -->
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320" bgcolor="#ffffff">
+<tr>
+    <td style="height: 36px;" height="36" valign="top">
+        <table cellpadding="0" cellspacing="0" style="width:640px;" class="width320">
+        <tr>
+            <td style="width: 10px; height: 36px;" height="36" aria-hidden="true"></td>
+            <td style="width: 190px;" align="left" valign="top">
+                <div style="line-height:10px;" class="lhfix">&nbsp;</div>
+                
+                <!-- LOGO -->
+                <div><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=fom35r6ppad2b8q3mvftsmboiqk8265mj5vberulm6gqnnkus8bg
+"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/logo_cvs_2019.png" height="16" alt="CVS&reg;" style="display: block; border: 0px;" /></a></div>
+                <!-- /LOGO -->
+                
+            </td>
+			
+            <td style="width: 430px;" align="right" valign="top" class="width110">
+                <div style="line-height:10px;" class="lhfix">&nbsp;</div>
+                <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;">
+					
+                   					<span class="hide">
+                        
+            
+                 
+                        
+                        <!-- Learn more Desktop -->
+                        <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=hbj3h3e5eo7cgukf1c5oens2odd9jsnuuoraie3jgf8th4ido28g
+" style="color: #000000; line-height: 20px; text-decoration: none; font-weight: bold;" class="bold">My Account<img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/head_arw.png" width="10" height="10" alt="" style="display: inline; border: 0px;" /></a>
+                        <!-- /Learn more Desktop -->
+ 
+                    </span>
+                </div>
+            </td>
+            <td style="width: 10px;" aria-hidden="true"></td>
+        </tr>
+        </table>
+		
+		
+        <!--[if !mso]><!-->
+        <div class="show" style="display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0;">
+            <div style="line-height:2px;" class="lhfix">&nbsp;</div>
+            <table cellpadding="0" cellspacing="0" style="width: 320px;">
+            <tr>
+                <td style="width: 10px;"></td>
+                <td style="width: 175px;" align="left">
+                    
+                    
+               
+                </td>
+                <td style="width: 125px;" align="right">
+                
+                   
+                    <!-- Join ExtraCare Mobile -->
+                    <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=hbj3h3e5eo7cgukf1c5oens2odd9jsnuuoraie3jgf8th4ido28g
+" style="color: #000000; line-height: 20px; text-decoration: none; font-weight: bold;" class="bold">My Account<img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/head_arw.png" width="10" height="10" alt="" style="display: inline; border: 0px;" /></a></div>
+                    <!-- /Join ExtraCare Mobile -->
+                     
+                </td>
+                <td style="width: 10px;"></td>
+            </tr>
+            </table>
+            <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+        </div>
+        <!--<![endif]-->
+    </td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320" bgcolor="#d8d8d8"role="presentation"><tr><td height="1" style="line-height: 1px;"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="1" style="display: block; border: 0px;" alt="" /></td></tr></table>
+<!-- /HEADER - Non-Member -->
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+    
+
+    
+        
+        
+    
+    <!-- Hero - Color Image, Color Image Coupon -->
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320">
+<tr>
+    <td align="center" bgcolor="#CCCCCC">
+        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+        <table cellpadding="0" cellspacing="0" style="width:640px;" class="width320">
+        <tr>
+            <td style="width: 40px;" class="width30" aria-hidden="true"></td>
+            <td style="width: 560px;" align="center" class="width240">
+                
+                
+                    
+                <!-- Headline Large Desktop -->
+                   <h4 style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 40px; color: #000000; line-height: 44px; font-weight: bold;" class="bold hide lhfix headline-max">Thanks for choosing CVS<sup>&#174;</sup></h4>
+
+                <!-- /Headline Large Desktop -->
+                
+                <!-- Headline Large Mobile -->
+                <!--[if !mso]><!-->
+                <div class="show" style="display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0;">
+                    <h4 style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 32px; color: #000000; line-height: 36px; font-weight: bold;" class="bold lhfix">Thanks for choosing CVS<sup>&#174;</sup></h4>
+
+                </div>
+                <!--<![endif]-->
+                <!-- /Headline Large Mobile -->
+                    
+            </td>
+            <td style="width: 40px;" class="width30" aria-hidden="true"></td>
+        </tr>
+        </table>
+        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+        
+        <!-- Image -->
+        <div class="hide"><a href="https://pharmacy.cvs.com/pub/acc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4fDNBs2gSH1T0mm0K8jxfzk2XWchqZc9H10nOZIvHtZQbsTlk_rginyU3IfThnDu6fxlgXn9RhcLC2RUuUoXRtv5vQ2jDkWvCLL4R4lp1F3VBhEX86r1vdNAl106Yu_MgSmTAuukgQgo3UwhINTlGV8lyu5PgR4I_Iu-3vVkAFujIMjCo2AtzFs8qEUYMyScMKGpZPspk-s2cokcmBCRorcODgyL0a9qaq9bsquelLVTfl1fuTioK1r4oDS2BGHiSY5bj5gknToAeQw.&_di_=ec760k2l7v758uc8o4vctaftar3uafcnc4ol6sr2avt9hvvr78c0"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/4Px_banner.png" width="600" alt="" style="display:block; height:auto; border:0px;" /></a></div>
+        <!-- /Image -->
+        
+        <!-- Image Mobile -->
+        <!--[if !mso]><!-->
+        <div class="show" style="display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0;">
+        <div><a href="https://pharmacy.cvs.com/pub/acc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4fDNBs2gSH1T0mm0K8jxfzk2XWchqZc9H10nOZIvHtZQbsTlk_rginyU3IfThnDu6fxlgXn9RhcLC2RUuUoXRtv5vQ2jDkWvCLL4R4lp1F3VBhEX86r1vdNAl106Yu_MgSmTAuukgQgo3UwhINTlGV8lyu5PgR4I_Iu-3vVkAFujIMjCo2AtzFs8qEUYMyScMKGpZPspk-s2cokcmBCRorcODgyL0a9qaq9bsquelLVTfl1fuTioK1r4oDS2BGHiSY5bj5gknToAeQw.&_di_=ec760k2l7v758uc8o4vctaftar3uafcnc4ol6sr2avt9hvvr78c0" class="show" style="display:none;"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/4Px_banner.png" width="300" alt="" style="display:block; height:auto; border:0px;" /></a></div>
+        </div>
+        <!--<![endif]-->
+        <!-- /Image Mobile -->
+        
+        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+    </td>
+</tr>
+</table>
+
+<!-- Coupon -->
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320">
+<tr>
+    <td style="width: 20px;" class="width10" valign="top" aria-hidden="true">
+        <table cellpadding="0" cellspacing="0"><tr><td style="width: 20px; height: 80px;" height="80" class="width10" bgcolor="#CCCCCC"></td></tr></table>
+    </td>
+    <td style="width: 600px;" class="width300" align="center" valign="top" bgcolor="#ffffff">
+        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+        <table cellpadding="0" cellspacing="0" style="width: 600px;" class="width300">
+        <tr>
+            <td style="width: 40px;" class="width30" aria-hidden="true"></td>
+            <td style="width: 520px;" align="center" class="width260">
+                <!-- Body copy -->
+                <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px;"><b>Your transaction on</b> <b>Jan 31, 2023 08:46 PM</b><br><b>$                    9.07</b> &mdash; Total spent this trip<br> &mdash; Total saved this trip<br><b>$             0.50</b> &mdash; Total ExtraCare savings this year!</div>
+                <div style="line-height:24px;" class="lhfix">&nbsp;</div>
+                <!-- /Body copy -->
+            </td>
+            <td style="width: 40px;" class="width30" aria-hidden="true"></td>
+        </tr>
+        </table>
+        <table cellpadding="0" cellspacing="0" style="width: 600px;" class="width300">
+        <tr>
+            <td style="width: 40px;" class="width20" aria-hidden="true"></td>
+            <td style="width: 520px;" align="center" class="width260">
+                
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 400px;" align="center" bgcolor="#cc0000">
+                    
+                    <div style="line-height:10px;" class="lhfix">&nbsp;</div>
+                    <!--[if gte mso 9]>
+        <style type="text/css">
+            .coupon { border: 2px dashed #a50000 !important; }
+            .resetBorder { border: none !important; }
+        </style>
+        <![endif]-->
+        <table cellpadding="0" cellspacing="0" border="0" class="coupon"><tr><td>
+        <div style="border: 2px dashed #a50000;" class="resetBorder">
+
+                    <table cellpadding="0" cellspacing="0" style="width: 380px;" class="width234">
+                    <tr>
+                        <td style="width: 29px;" class="width20" aria-hidden="true"></td>
+                        <td style="width: 322px;" align="center" class="width194">
+                            <div style="line-height:30px;" class="lhfix">&nbsp;</div>
+                            
+                            <!-- Headline -->
+                                <h4 style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 40px; color: #ffffff; line-height: 44px;" class="bold font32 lh44 lhfix headline"><a href="https://pharmacy.cvs.com/pub/acc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4fDNBs2gSH1T0mm0K8jxfzk2XWchqZc9H10nOZIvHtZQbsTlk_rginyU3IfThnDu6fxlgXn9RhcLC2RUuUoXRtv5vQ2jDkWvCLL4R4lp1F3VBhEX86r1vdNAl106Yu_MgSmTAuukgQgo3UwhINTlGV8lyu5PgR4I_Iu-3vVkAFujIMjCo2AtzFs8qEUYMyScMKGpZPspk-s2cokcmBCRorcODgyL0a9qaq9bsquelLVTfl1fuTioK1r4oDS2BGHiSY5bj5gknToAeQw.&_di_=ec760k2l7v758uc8o4vctaftar3uafcnc4ol6sr2avt9hvvr78c0" style="color: #ffffff; line-height: 44px; text-decoration: none; font-weight: bold;" class="lh36">Savings at your fingertips</a></h4>
+
+                            <div style="line-height:16px;" class="lhfix">&nbsp;</div>
+                            <!-- /Headline -->
+                            <!-- Body copy -->
+                            <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 16px; color: #ffffff; line-height: 24px; font-weight: 400;"><a href="https://pharmacy.cvs.com/pub/acc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4fDNBs2gSH1T0mm0K8jxfzk2XWchqZc9H10nOZIvHtZQbsTlk_rginyU3IfThnDu6fxlgXn9RhcLC2RUuUoXRtv5vQ2jDkWvCLL4R4lp1F3VBhEX86r1vdNAl106Yu_MgSmTAuukgQgo3UwhINTlGV8lyu5PgR4I_Iu-3vVkAFujIMjCo2AtzFs8qEUYMyScMKGpZPspk-s2cokcmBCRorcODgyL0a9qaq9bsquelLVTfl1fuTioK1r4oDS2BGHiSY5bj5gknToAeQw.&_di_=ec760k2l7v758uc8o4vctaftar3uafcnc4ol6sr2avt9hvvr78c0" style="color: #ffffff; line-height: 24px; text-decoration: none;">Tap the CVS Pharmacy<sup>&reg;</sup> app to access your deals and rewards, browse weekly ad offers and more.</a></div>
+                            <div style="line-height:24px;" class="lhfix">&nbsp;</div>
+                            <!-- /Body copy -->
+                                
+                            <!--Primary White Button - Border Style Button with Table Assist-->
+                            <table cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#fffffe">
+                            <tbody><tr>
+                            <td align="center" valign="middle" width="200" height="44" bgcolor="#fffffe">
+                            <a href="https://pharmacy.cvs.com/pub/acc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4fDNBs2gSH1T0mm0K8jxfzk2XWchqZc9H10nOZIvHtZQbsTlk_rginyU3IfThnDu6fxlgXn9RhcLC2RUuUoXRtv5vQ2jDkWvCLL4R4lp1F3VBhEX86r1vdNAl106Yu_MgSmTAuukgQgo3UwhINTlGV8lyu5PgR4I_Iu-3vVkAFujIMjCo2AtzFs8qEUYMyScMKGpZPspk-s2cokcmBCRorcODgyL0a9qaq9bsquelLVTfl1fuTioK1r4oDS2BGHiSY5bj5gknToAeQw.&_di_=ec760k2l7v758uc8o4vctaftar3uafcnc4ol6sr2avt9hvvr78c0" target="_blank" style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: bold; font-size:16px; line-height: 1.2; color: #cc0000; text-decoration: none; background-color: #fffffe; border-top: 12px solid #fffffe; border-bottom: 12px solid #fffffe; border-right: 24px solid #fffffe; border-left: 24px solid #fffffe; display: inline-block;" class="btn_fontcc0000">Go to our app</a> 
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <!--Primary White Button - Border Style Button with Table Assist-->
+                                
+                                
+                            <div style="line-height:30px;" class="lhfix">&nbsp;</div>
+                        </td>
+                        <td style="width: 29px;" class="width20" aria-hidden="true"></td>
+                    </tr>
+                    </table>
+
+                    </div>
+                    </td></tr></table>
+
+                    <div style="line-height:10px;" class="lhfix">&nbsp;</div>
+                    
+                    </td>
+                </tr>
+                </table>
+                <div style="line-height:40px;" class="lhfix lh20">&nbsp;</div>
+                
+            </td>
+            <td style="width: 40px;" class="width20" aria-hidden="true"></td>
+        </tr>
+        </table>
+    </td>
+    <td style="width: 20px;" class="width10" valign="top" aria-hidden="true">
+        <table cellpadding="0" cellspacing="0"><tr><td style="width: 20px; height: 80px;" height="80" class="width10" bgcolor="#CCCCCC"></td></tr></table>
+    </td>
+</tr>
+</table>
+<!-- /Coupon -->
+
+<!-- /Hero - Color Image, Color Image Coupon -->
+    
+
+
+
+    
+
+    
+    
+<!-- Banner - Text -->
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320" bgcolor="#CCCCCC">
+<tr>
+    <td style="height: 40px;" height="40" align="center" valign="middle">
+        <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000 line-height: 24px; text-decoration: none;" class="bold"><span style="color:#000000; text-decoration: none;"><b>Here are your transaction details:</b></span></div>
+    </td>
+</tr>
+</table>
+<!-- /Banner - Text -->
+
+    
+
+
+
+<div style="font-size:9px; line-height:9px;" class="lhfix">&nbsp;</div>
+<!-- START: DATE -->
+<table role="Presentation" width="640" border="0" cellspacing="0" cellpadding="0" class="width320" style="width:640px;">
+  <tr>
+    <td width="7" class="hide"></td>
+    <td align="center" width="613" valign="top" class="block width320"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal; text-align: left;" class="pleft8 pright20">Jan 31, 2023 08:46 PM</div></td>
+    <td width="20"></td>
+  </tr>
+</table>
+<div style="font-size:9px; line-height:9px;" class="lhfix">&nbsp;</div>
+<!-- END: DATE -->
+<table role="Presentation" width="640" border="0" cellspacing="0" cellpadding="0" class="width320" style="width:640px; mso-line-height-rule: exactly;">
+  <tr>
+    <th width="7" class="hide"></th>
+    <th align="center" width="372" valign="top" class="block width320" style="width:372px;"> 
+      <!-- START: LEFT COLUMN --> 
+      <!-- START: RECEIPT --> 
+      
+      <!-- START: RECEIPT HEADER -->
+      
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#F1F1F1" width="372" class="width320" style="width:372px;">
+        <tr>
+          <td width="35" align="left" valign="middle" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold; padding: 5px 0 5px 8px;">Qty </td>
+          <td width="205" align="left" valign="middle" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold;" class="width137">Item </td>
+          <td width="45" align="right" valign="middle" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold;">Paid </td>
+          <td width="4"></td>
+          <td width="77" style="padding-right: 8px;" align="left" valign="middle"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold;">&nbsp;</div></td>
+        </tr>
+      </table>
+      <div style="font-size:9px; line-height:9px;" class="lhfix">&nbsp;</div>
+      
+      <!-- END: RECEIPT HEADER --> 
+      <!-- START: PRODUCT 1 - SKU: 480041 - 2840059668 -->
+      
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="372" class="width320" style="width:372px;">
+        <tr>
+          <td width="35" style="padding-left: 8px; padding-bottom: 5px;" align="left" valign="top"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:13px; font-weight:normal;">1</div></td>
+          <td width="205" align="left" valign="bottom" style="padding-bottom: 5px;" class="width137"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal;">Cheetos Puffs Cheese Flavored Snacks 9.5&nbsp;oz</div>
+ </td>
+          <td width="45" align="right" valign="bottom" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal; padding-bottom: 5px;">4.49F</td>
+          <td width="4"></td>
+          <td width="77" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold; padding-right: 8px; padding-bottom: 5px;" align="right" valign="bottom">&nbsp;</td>
+        </tr>
+      </table>
+      <!-- START: DISCOUNT -->
+      
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="372" class="width320" style="width:372px;">
+        <tr valign="top">
+          <td width="35" align="left" style="padding-left: 8px; padding-bottom: 5px; line-height: 14px;">&nbsp;</td>
+          <td width="331" align="left" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold; padding-left: 10px;" class="width290"></td>
+        </tr>
+      </table>
+      
+      <!-- END: DISCOUNT --> 
+      <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+      
+      <!-- END: PRODUCT --> 
+      <!-- START: PRODUCT 2 - SKU: 72000081 - 7572000081 -->
+      
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="372" class="width320" style="width:372px;">
+        <tr>
+          <td width="35" style="padding-left: 8px; padding-bottom: 5px;" align="left" valign="top"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:13px; font-weight:normal;">1</div></td>
+          <td width="205" align="left" valign="bottom" style="padding-bottom: 5px;" class="width137"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal;">POLAND SRING BOTTL 16.9 </div>
+            <div style="line-height:5px;" class="lhfix">&nbsp;</div>
+            <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold;">.99  EACH  OR 50/   .99</div>
+             </td>
+          <td width="45" align="right" valign="bottom" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal; padding-bottom: 5px;">.99F</td>
+          <td width="4"></td>
+          <td width="77" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold; padding-right: 8px; padding-bottom: 5px;" align="right" valign="bottom">&nbsp;</td>
+        </tr>
+      </table>
+      <!-- START: DISCOUNT -->
+      
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="372" class="width320" style="width:372px;">
+        <tr valign="top">
+          <td width="35" align="left" style="padding-left: 8px; padding-bottom: 5px; line-height: 14px;">&nbsp;</td>
+          <td width="331" align="left" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold; padding-left: 10px;" class="width290"></td>
+        </tr>
+      </table>
+      
+      <!-- END: DISCOUNT --> 
+      <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+      
+      <!-- END: PRODUCT --> 
+      <!-- START: PRODUCT 3 - SKU: 1005 - 1005 -->
+      
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="372" class="width320" style="width:372px;">
+        <tr>
+          <td width="35" style="padding-left: 8px; padding-bottom: 5px;" align="left" valign="top"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:13px; font-weight:normal;">1</div></td>
+          <td width="205" align="left" valign="bottom" style="padding-bottom: 5px;" class="width137"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal;">BOTTLE DEPOSIT </div>
+ </td>
+          <td width="45" align="right" valign="bottom" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal; padding-bottom: 5px;">.05F</td>
+          <td width="4"></td>
+          <td width="77" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold; padding-right: 8px; padding-bottom: 5px;" align="right" valign="bottom">&nbsp;</td>
+        </tr>
+      </table>
+      <!-- START: DISCOUNT -->
+      
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="372" class="width320" style="width:372px;">
+        <tr valign="top">
+          <td width="35" align="left" style="padding-left: 8px; padding-bottom: 5px; line-height: 14px;">&nbsp;</td>
+          <td width="331" align="left" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold; padding-left: 10px;" class="width290"></td>
+        </tr>
+      </table>
+      
+      <!-- END: DISCOUNT --> 
+      <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+      
+      <!-- END: PRODUCT --> 
+      <!-- START: PRODUCT 5 - SKU: 985846 - 985846 -->
+      
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="372" class="width320" style="width:372px;">
+        <tr>
+          <td width="35" style="padding-left: 8px; padding-bottom: 5px;" align="left" valign="top"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:13px; font-weight:normal;">1</div></td>
+          <td width="205" align="left" valign="bottom" style="padding-bottom: 5px;" class="width137"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal;">.05 BAG FEE        1 </div>
+ </td>
+          <td width="45" align="right" valign="bottom" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal; padding-bottom: 5px;">.05N</td>
+          <td width="4"></td>
+          <td width="77" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold; padding-right: 8px; padding-bottom: 5px;" align="right" valign="bottom">&nbsp;</td>
+        </tr>
+      </table>
+      <!-- START: DISCOUNT -->
+      
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="372" class="width320" style="width:372px;">
+        <tr valign="top">
+          <td width="35" align="left" style="padding-left: 8px; padding-bottom: 5px; line-height: 14px;">&nbsp;</td>
+          <td width="331" align="left" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold; padding-left: 10px;" class="width290"></td>
+        </tr>
+      </table>
+      
+      <!-- END: DISCOUNT --> 
+      <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+      
+      <!-- END: PRODUCT --> 
+      <!-- START: PRODUCT 4 - SKU: 767184 - 89899901000 -->
+      
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="372" class="width320" style="width:372px;">
+        <tr>
+          <td width="35" style="padding-left: 8px; padding-bottom: 5px;" align="left" valign="top"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:13px; font-weight:normal;">1</div></td>
+          <td width="205" align="left" valign="bottom" style="padding-bottom: 5px;" class="width137"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal;">Vita Coco Pure Coconut Water 16.9&nbsp;fl&nbsp;oz</div>
+ </td>
+          <td width="45" align="right" valign="bottom" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal; padding-bottom: 5px;">3.49F</td>
+          <td width="4"></td>
+          <td width="77" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold; padding-right: 8px; padding-bottom: 5px;" align="right" valign="bottom">&nbsp;</td>
+        </tr>
+      </table>
+      <!-- START: DISCOUNT -->
+      
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="372" class="width320" style="width:372px;">
+        <tr valign="top">
+          <td width="35" align="left" style="padding-left: 8px; padding-bottom: 5px; line-height: 14px;">&nbsp;</td>
+          <td width="331" align="left" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold; padding-left: 10px;" class="width290"></td>
+        </tr>
+      </table>
+      
+      <!-- END: DISCOUNT --> 
+      <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+      
+      <!-- END: PRODUCT --> 
+        
+      <!-- START: DIV LINE -->
+      <table border="0" cellspacing="0" cellpadding="0" width="372" style="width:372px;" class="width320">
+        <tr>
+          <td align="left" style="padding: 6px 0;" class="block"><div style="line-height:1px; background-color: #8b8b8b;" class="lhfix">&nbsp;</div></td>
+        </tr>
+      </table>
+      <!-- END: DIV LINE --> 
+        
+      <!-- START: DISCOUNTS APPLIED -->
+      <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+        
+      <!-- START: DISCOUNTS APPLIED HEADER -->
+      
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="372" class="width320" style="width:372px;">
+        <tr>
+          <td width="232" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold; padding: 0 8px;" align="left" valign="top">Discounts Applied</td>
+          <td width="77" align="right" valign="bottom"><div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal;">&nbsp;</div></td>
+          <td width="66" align="right" valign="bottom" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal; padding-right: 8px;">&nbsp;</td>
+        </tr>
+      </table>
+      <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+      
+      <!-- END: DISCOUNTS APPLIED HEADER --> 
+      <!-- END: DISCOUNTS APPLIED --> 
+        
+      <!-- START: DIV LINE -->
+      <table border="0" cellspacing="0" cellpadding="0" width="372" style="width:372px;" class="width320">
+        <tr>
+          <td align="left" style="padding: 6px 0;" class="block"><div style="line-height:1px; background-color: #8b8b8b;" class="lhfix">&nbsp;</div></td>
+        </tr>
+      </table>
+      <!-- END: DIV LINE --> 
+        
+      <!-- START: TALLY -->
+      
+      <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+      <table role="Presentation" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="372" class="width320" style="width:372px;">
+        <tr>
+          <th class="block width320" style="padding-left: 8px;" align="left" valign="top"> <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="8" style="widows: "></td>
+                <td width="362" align="left" valign="middle" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:bold;">5 Items</td>
+              </tr>
+            </table>
+          </th>
+        </tr>
+      </table>
+      <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+      
+      <!-- END: TALLY --> 
+      
+      <!-- START: DIV LINE -->
+      <table border="0" cellspacing="0" cellpadding="0" width="372" style="width:372px;" class="width320">
+        <tr>
+          <td align="left" style="padding: 6px 0;" class="block"><div style="line-height:1px; background-color: #8b8b8b;" class="lhfix">&nbsp;</div></td>
+        </tr>
+      </table>
+      <!-- END: DIV LINE --> 
+        
+      <!-- START: CVS STORE -->
+      
+      <table border="0" cellspacing="0" cellpadding="0" width="372" class="width320" style="width:372px;">
+        <tr> 
+          <th class="block width320 height-auto" align="left" height="121" valign="top" style="height:121px;"> <table role="Presentation" border="0" cellspacing="0" cellpadding="0" width="175" style="width:175px;" class="width320">
+              <tr>
+                <td width="8"></td>
+                <td width="167" align="left" valign="top" class="width320"><div style="line-height:12px;" class="lhfix">&nbsp;</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal; text-decoration: underline;"> <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUBBWWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qQBIrbGFjqFC6c6kAZD5XHYf8jUDeg0kdwLDH6m_92DO9za-Sy8d_WFTjUok-DnJXqUcMUGU5ogbTRUhplQOYXmQILO8pOwVbCvfEQVu3shM7i8KLVplY7H--rNM33XKHYCxqRchWk8JxYQIieVuJQW-YNc7WzXwwNDbI.&_di_=i9rcpf57p27bi4a9i8solgii2d7brc2q2ifoslb6653js1lfiko0" target="_blank" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal; text-decoration: underline;">298 Mulberry St.<br>
+                    Houston & Mulberry<br>
+                    New York, NY 10012</a> </div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal;">Store phone: (212) 226-6111</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:14px; font-weight:normal;">Helped by: SELF</div>
+                  <div style="font-size:25px; line-height:25px;" class="lhfix hide">&nbsp;</div></td>
+              </tr>
+            </table>
+          </th>
+          <th class="block width320" width="197"> <div style="line-height:12px;" class="lhfix">&nbsp;</div>
+            <table role="Presentation" class="width320" border="0" cellspacing="0" cellpadding="0" width="197" style="width:197px;">
+              <tr>
+                <td align="right" width="91">
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:10px; line-height:12px; font-weight:bold; text-align: right;">Store #10407</div></td>
+                <td align="center" width="15" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:10px; line-height:12px; font-weight:bold; text-align: center;">&nbsp;|&nbsp;</td>
+                <td align="left" width="91">
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:10px; line-height:12px; font-weight:bold; text-align: left;">Register #17</div></td>
+              </tr>
+              <tr>
+                <td align="right" width="91">
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:10px; line-height:12px; font-weight:bold; text-align: right;">Cashier #97</div></td>
+                <td align="center" width="15" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:10px; line-height:12px; font-weight:bold; text-align: center;">&nbsp;|&nbsp;</td>
+                <td align="left" width="91">
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:10px; line-height:12px; font-weight:bold; text-align: left;">Transaction #8551</div></td>
+              </tr>
+            </table>
+            <table role="Presentation" class="width320" border="0" cellspacing="0" cellpadding="0" width="197" style="width:197px;">
+              <tr>
+                <td align="center"><div style="font-size:8px; line-height:8px;" class="lhfix">&nbsp;</div>
+                  <div align="center" class="width320"> <img src="http://pharmacy.cvs.com/bca/z/image?bc=351040730318551178&ct=CODE128&st=Y&f=GIF" alt="351040730318551178" border="0" style="display:block;" /> </div></td>
+              </tr>
+            </table>
+          </th>
+ </tr>
+      </table>
+      <table border="0" cellspacing="0" cellpadding="0" width="372" class="width320" style="width:372px;">
+        <tr>
+          <th align="left" class="block" style="vertical-align: top;"> <table role="Presentation" class="width320" border="0" cellspacing="0" cellpadding="0" width="370" style="width:370px;">
+              <tr>
+                <td width="8" class="hide"></td>
+                <td width="362" align="left" valign="middle" class="pleft8">
+                  <div style="line-height:12px;" class="lhfix">&nbsp;</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:10px; line-height:12px; font-weight:normal; text-align: left;" class="textleft">Returns must be made with this receipt, subject to CVS Return Policy, thru 04/01/2023. Refund amount is based on price after all coupons & discounts.</div>
+                  <div style="font-size:18px; line-height:18px;" class="lhfix">&nbsp;</div>
+                  <div style="line-height:15px;" class="lhfix">&nbsp;</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">TOTAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.07</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">DEBIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.07</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">************9805&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CH</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">Citibank&nbsp;Card&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;************9805</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">APPROVED#&nbsp;000949&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REF#&nbsp;175517</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">TRAN&nbsp;TYPE:&nbsp;SALE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AID:&nbsp;&nbsp;A0000000042203</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">TC:&nbsp;45819209E6C5C7AF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TERMINAL#&nbsp;84616032</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">PIN&nbsp;VERIFIED&nbsp;ONLINE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CVM:&nbsp;420300</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">TVR(95):&nbsp;0000048000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TSI(9B):&nbsp;E800</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">&nbsp;</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">CHANGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.00</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">&nbsp;</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">&nbsp;</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">&nbsp;</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">.</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">&nbsp;</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">THANK&nbsp;YOU.&nbsp;SHOP&nbsp;24&nbsp;HOURS&nbsp;AT&nbsp;CVS.COM</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">&nbsp;</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">ExtraCare&nbsp;Card&nbsp;balances&nbsp;as&nbsp;of&nbsp;01/27</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">Year&nbsp;to&nbsp;Date&nbsp;Savings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.50</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">********************************</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">Access&nbsp;all&nbsp;coupons&nbsp;&&nbsp;rewards,&nbsp;and</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">track&nbsp;your&nbsp;2%&nbsp;earnings&nbsp;in&nbsp;the&nbsp;CVS</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">Pharmacy&nbsp;app!</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">&nbsp;</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">********************************</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">&nbsp;</div>
+                  <div style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:12px; line-height:15px; font-weight:normal;" class="textleft">--------------------------------------</div>
+                  <div style="line-height:4px;" class="lhfix">&nbsp;</div></td>
+              </tr>
+            </table>
+          </th>
+        </tr>
+      </table>
+      
+      <!-- END: CVS STORE --> 
+      <!-- END: RECEIPT --> 
+      <!-- END: LEFT COLUMN --> </th>
+    <th width="21" class="hide"></th>
+    <th align="center" width="240" valign="top" class="block width320"> <!-- START: RIGHT COLUMN --> 
+      <!-- START: SAVINGS AND REWARDS -->
+      
+      <table role="Presentation" width="240" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#E9F6F9" class="width320" style="width:240px;">
+        <tr>
+          <td align="center" valign="top"> 
+            <!-- START: HEADLINE -->
+            
+            <div style="line-height:14px;" class="lhfix">&nbsp;</div>
+            <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="218" class="width294" style="font-family: Helvetica, Arial, sans-serif; color:#1E1E1E; font-size:18px; line-height:22px; font-weight:normal; text-align: left;">Deals &amp; Rewards</td>
+              </tr>
+            </table>
+            <div style="line-height:14px;" class="lhfix">&nbsp;</div>
+            
+            <!-- END: HEADLINE --> 
+            <!-- START: SAVINGS MODULE --> 
+            <!-- cpnFmtCd = 2 --> 
+            <!-- cpnQualTxt =  -->
+            
+            <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td colspan="3" height="1" bgcolor="#E9E9E9" style="line-height: 1px;"></td>
+              </tr>
+              <tr>
+                <td width="1" bgcolor="#E9E9E9" style="font-size: 1px; line-height: 1px;"></td>
+                <td width="222" bgcolor="#FFFFFF" style="padding-bottom: 2px; padding-top: 2px;" align="center" class="width302"><table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td colspan="3" height="2" bgcolor="#FFD216" style="font-size: 2px; line-height: 2px;" class="lhfix"></td>
+                    </tr>
+                    <tr>
+                      <td width="2" bgcolor="#FFD216" style="font-size: 1px; line-height: 1px; width: 2px;"></td>
+                      <td width="214" align="center" valign="top" bgcolor="#FFFFFF" style="padding-bottom: 8px;" class="width294"><div style="font-size:8px; line-height:8px;" class="lhfix">&nbsp;</div>
+                        <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="5"></td>
+                            <td width="151" class="width204" style="padding-right:4px;"><table role="Presentation" border="0" cellspacing="0" cellpadding="0" width="147" class="width204">
+                                <tr>
+                                  <td height="117" align="left" valign="top">                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#CC0000; font-size:32px; line-height:34px; font-weight:bold;"><span style="font-size: 18px; vertical-align:12px; line-height:0px;">$</span>2.00</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#CC0000; font-size:18px; line-height:20px; font-weight:normal;"><strong>extra</strong>bucks<span style="font-size: 10px; vertical-align:7px; line-height:0px;">&reg;</span> rewards</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#000000; font-size:10px; line-height:12px; font-weight:normal;">$2 ExtraBucks Rewards</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#565656; font-size:10px; line-height:12px; font-weight:normal;">Redeemable in store only</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div></td>
+                                </tr>
+                                <tr>
+                                  <td valign="top" align="left"><!-- START: NEW EXPIRE -->
+                                    
+                                    <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                                      <tr> 
+                                        <td align="left" valign="middle" style="padding-right: 5px;" height="14"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/star.png" width="14" alt="" border="0" style="display:block;" /></td>
+                                        <td align="left" valign="middle" height="14" style="font-family: Helvetica, Arial, sans-serif; color:#565656; font-size:10px; line-height:14px; font-weight:normal;"><span style="font-weight: bold; color:#1E1E1E;">NEW!</span>&nbsp; Send to card by 02/04/23</td>
+                                      </tr>
+                                    </table>
+                                    
+                                    <!-- END: NEW EXPIRE --></td>
+                                </tr>
+                                <tr>
+                                  <td align="left" valign="bottom" style="font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 7px; line-height: 9px; padding-top: 6px;">Sequence No: 360002520753</td>
+                                </tr>
+                              </table></td>
+                            <td width="44" valign="middle" align="center" style="border-left: #FFD216 dotted 2px;" class="pleft10"> 
+                              <!-- START: SEND TO CARD-->
+                              
+                              <div style="height:auto"> <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUBBWAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-SvcurlL1dAQHm-kmO7jZxZrlLTCet8QCeVLGpGfyJeW_ZI-cTouGlEt71cmpnTFDXI6EtsmzBJXQ-V3jx06uPHALJnfAYH66YnN6uDP4lDo5wnn12b9r0i9QRG5DgLJ_md_ccIz1wimBznZXjdpJTIYSRPMlfLwvNXbaMNWOY7_oKCOKzjmEeYOCuHTRcSF1j6Vcfa-fDyVWEg2CcMb-snyRDJtb2XNx8hz05WJN-hVbsbF2k8DkcOp-ezqIz5xyM8GSZcszFYRZ27d6v0kXIUIaHRgezgbr6jOh0TZbn671IVhKYyJlhEDI13YoXl5qgkz_PyvfiAc3WFfsYk_RMot3kXvJ8fYMf06UKJajOEMLbzCt5NdooutAaaUXlglp99qExgc2DWlPNchRY44ouFesYuxftuzjPJ_98vfH8kqV-Jwk.&_di_=lh51vutl7i5hnr0h5664rs86kaqo0g86eqqsgsplbjo50v9n292g"> <img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/sendToCard.jpg" width="52" alt="" border="0" style="display:block;" /> </a> </div>
+                              
+                              <!-- END: SEND TO CARD --></td>
+                          </tr>
+                        </table></td>
+                      <td width="2" bgcolor="#FFD216" style="font-size: 1px; line-height: 1px; width: 2px;"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" height="2" bgcolor="#FFD216" style="font-size: 2px; line-height: 2px;"></td>
+                    </tr>
+                  </table></td>
+                <td width="1" bgcolor="#E9E9E9" style="font-size: 1px; line-height: 1px;"></td>
+              </tr>
+              <tr>
+                <td colspan="3" height="1px" bgcolor="#E9E9E9" style="font-size: 1px; font-size:1px; line-height: 1px;"></td>
+              </tr>
+            </table>
+            <div style="font-size:1px; line-height:8px;" class="lhfix">&nbsp;</div>
+            
+            <!-- END: SAVINGS MODULE --> 
+            <!-- START: SAVINGS MODULE --> 
+            <!-- cpnFmtCd = 2 --> 
+            <!-- cpnQualTxt = Woohoo! You earned 2% back in ExtraBucks Rewards. -->
+            
+            <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td colspan="3" height="1" bgcolor="#E9E9E9" style="line-height: 1px;"></td>
+              </tr>
+              <tr>
+                <td width="1" bgcolor="#E9E9E9" style="font-size: 1px; line-height: 1px;"></td>
+                <td width="222" bgcolor="#FFFFFF" style="padding-bottom: 2px; padding-top: 2px;" align="center" class="width302"><table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td colspan="3" height="2" bgcolor="#FFD216" style="font-size: 2px; line-height: 2px;" class="lhfix"></td>
+                    </tr>
+                    <tr>
+                      <td width="2" bgcolor="#FFD216" style="font-size: 1px; line-height: 1px; width: 2px;"></td>
+                      <td width="214" align="center" valign="top" bgcolor="#FFFFFF" style="padding-bottom: 8px;" class="width294"><div style="font-size:8px; line-height:8px;" class="lhfix">&nbsp;</div>
+                        <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="5"></td>
+                            <td width="151" class="width204" style="padding-right:4px;"><table role="Presentation" border="0" cellspacing="0" cellpadding="0" width="147" class="width204">
+                                <tr>
+                                  <td height="117" align="left" valign="top">                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#CC0000; font-size:32px; line-height:34px; font-weight:bold;"><span style="font-size: 18px; vertical-align:12px; line-height:0px;">$</span>5.33</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#CC0000; font-size:18px; line-height:20px; font-weight:normal;"><strong>extra</strong>bucks<span style="font-size: 10px; vertical-align:7px; line-height:0px;">&reg;</span> rewards</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#000000; font-size:10px; line-height:12px; font-weight:normal;">$5.33 ExtraBucks Rewards</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#000000; font-size:10px; line-height:12px; font-weight:normal;">Woohoo! You earned 2% back in ExtraBucks Rewards.</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#565656; font-size:10px; line-height:12px; font-weight:normal;">Redeemable online &amp; in store</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div></td>
+                                </tr>
+                                <tr>
+                                  <td valign="top" align="left"><!-- START: NEW EXPIRE -->
+                                    
+                                    <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                                      <tr> 
+                                        <td align="left" valign="middle" style="padding-right: 5px;" height="14"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/star.png" width="14" alt="" border="0" style="display:block;" /></td>
+                                        <td align="left" valign="middle" height="14" style="font-family: Helvetica, Arial, sans-serif; color:#565656; font-size:10px; line-height:14px; font-weight:normal;"><span style="font-weight: bold; color:#1E1E1E;">NEW!</span>&nbsp; Send to card by 03/31/23</td>
+                                      </tr>
+                                    </table>
+                                    
+                                    <!-- END: NEW EXPIRE --></td>
+                                </tr>
+                                <tr>
+                                  <td align="left" valign="bottom" style="font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 7px; line-height: 9px; padding-top: 6px;">Sequence No: 356177628597</td>
+                                </tr>
+                              </table></td>
+                            <td width="44" valign="middle" align="center" style="border-left: #FFD216 dotted 2px;" class="pleft10"> 
+                              <!-- START: SEND TO CARD-->
+                              
+                              <div style="height:auto"> <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUBBWAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-SvcurlL1dAQHm-kmO7jZxZrlLTCet8QCeVLGpGfyJeW_ZI-cTouGlEt71cmpnTFDXI6EtsmzBJXQ-V3jx06uPHALJnfAYH66YnN6uDP4lDo5wnn12b9r0i9QRG5DgLJ_md_ccIz1wimBznZXjdpJT99gVpd9tm55J-RRQ7rYFV1etNYu37VVh5461rOCkor3gC-Jga_75jXHlyE3MSmt4JDBf4K1VRANrQqByCkuZFTZE5dqsXEGt7AYZ600CYdV9iIfaQk_j3QzVkSGU-2RSg4m1yJU--VEg4P12Id73gQJhYwhnaYJqjAdv5tQdkN1HTmpzEEpagQKQG7x3tWmE2C8SJaDCSfVjhQMswbN_70gaACqz1UwqEaguq4HPspqxd_utz_6oUxMpYAh6bTp7T3CtyW0hBXJKthLAMlhak87irFs.&_di_=062j4l18cl6jd797g2hv2shcscacf7782lci0ohaqccdshsnf2bg"> <img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/sendToCard.jpg" width="52" alt="" border="0" style="display:block;" /> </a> </div>
+                              
+                              <!-- END: SEND TO CARD --></td>
+                          </tr>
+                        </table></td>
+                      <td width="2" bgcolor="#FFD216" style="font-size: 1px; line-height: 1px; width: 2px;"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" height="2" bgcolor="#FFD216" style="font-size: 2px; line-height: 2px;"></td>
+                    </tr>
+                  </table></td>
+                <td width="1" bgcolor="#E9E9E9" style="font-size: 1px; line-height: 1px;"></td>
+              </tr>
+              <tr>
+                <td colspan="3" height="1px" bgcolor="#E9E9E9" style="font-size: 1px; font-size:1px; line-height: 1px;"></td>
+              </tr>
+            </table>
+            <div style="font-size:1px; line-height:8px;" class="lhfix">&nbsp;</div>
+            
+            <!-- END: SAVINGS MODULE --> 
+            <!-- START: SAVINGS MODULE --> 
+            <!-- cpnFmtCd = 5 --> 
+            <!-- cpnQualTxt =  -->
+            
+            <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td colspan="3" height="1" bgcolor="#E9E9E9" style="line-height: 1px;"></td>
+              </tr>
+              <tr>
+                <td width="1" bgcolor="#E9E9E9" style="font-size: 1px; line-height: 1px;"></td>
+                <td width="222" bgcolor="#FFFFFF" style="padding-bottom: 2px; padding-top: 2px;" align="center" class="width302"><table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td colspan="3" height="2" bgcolor="#D1D1D1" style="font-size: 2px; line-height: 2px;" class="lhfix"></td>
+                    </tr>
+                    <tr>
+                      <td width="2" bgcolor="#D1D1D1" style="font-size: 1px; line-height: 1px; width: 2px;"></td>
+                      <td width="214" align="center" valign="top" bgcolor="#FFFFFF" style="padding-bottom: 8px;" class="width294"><div style="font-size:8px; line-height:8px;" class="lhfix">&nbsp;</div>
+                        <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="5"></td>
+                            <td width="151" class="width204" style="padding-right:4px;"><table role="Presentation" border="0" cellspacing="0" cellpadding="0" width="147" class="width204">
+                                <tr>
+                                  <td height="117" align="left" valign="top">                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#CC0000; font-size:32px; line-height:34px; font-weight:bold;"><span style="font-size: 18px; vertical-align:12px; line-height:0px;">$</span>3.00<span style="font-size: 20px; color: #CC0000; font-weight: normal;">&nbsp;off</span></div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#000000; font-size:10px; line-height:12px; font-weight:normal;">$3 off $15 Frozen Foods (Incl. Breakfast, Appetizers, Pizza and Ice Cream)</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#565656; font-size:10px; line-height:12px; font-weight:normal;">Redeemable online &amp; in store</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div></td>
+                                </tr>
+                                <tr>
+                                  <td valign="top" align="left"><!-- START: NEW EXPIRE -->
+                                    
+                                    <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                                      <tr> 
+                                        <td align="left" valign="middle" style="padding-right: 5px;" height="14"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/star.png" width="14" alt="" border="0" style="display:block;" /></td>
+                                        <td align="left" valign="middle" height="14" style="font-family: Helvetica, Arial, sans-serif; color:#565656; font-size:10px; line-height:14px; font-weight:normal;"><span style="font-weight: bold; color:#1E1E1E;">NEW!</span>&nbsp; Send to card by 02/04/23</td>
+                                      </tr>
+                                    </table>
+                                    
+                                    <!-- END: NEW EXPIRE --></td>
+                                </tr>
+                                <tr>
+                                  <td align="left" valign="bottom" style="font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 7px; line-height: 9px; padding-top: 6px;">Sequence No: 359749702022</td>
+                                </tr>
+                              </table></td>
+                            <td width="44" valign="middle" align="center" style="border-left: #D1D1D1 dotted 2px;" class="pleft10"> 
+                              <!-- START: SEND TO CARD-->
+                              
+                              <div style="height:auto"> <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUBBWAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-SvcurlL1dAQHm-kmO7jZxZrlLTCet8QCeVLGpGfyJeW_ZI-cTouGlEt71cmpnTFDXI6EtsmzBJXQ-V3jx06uPHALJnfAYH66YnN6uDP4lDo5wnn12b9r0i9QRG5DgLJ_md_ccIz1wimBznZXjdpJT6riJQ9UZ8TPfHnSnk4jO6Rl44VdlEg9W1uqd_FrQpwpLxTOHBcqXLDBJYHiJJEEqXkvXpB77Vkf8ASMNgEidm8y1Lf0bC0Zjr2j7pWMVidlJBG6vfrD6MszWTswnD9jAjdGiIeS7uaH2RcLhweEfJK2kWwiRjWKUbXUSRs-COw3IoezSZU8wmKJPFXrZN_PsZVnXKBDTvRdqBhVCgZfuHUao3JkNs3q91XRqOI4ubpiPOcsW1GUVUsqEprmdGDpGeLG_xJorWvrN-rU_eWqnK5px82Y.&_di_=nkd46m0iimj7mefqdlpgn8eklimd5k5pejt5moagbhjpp49jr850"> <img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/sendToCard.jpg" width="52" alt="" border="0" style="display:block;" /> </a> </div>
+                              
+                              <!-- END: SEND TO CARD --></td>
+                          </tr>
+                        </table></td>
+                      <td width="2" bgcolor="#D1D1D1" style="font-size: 1px; line-height: 1px; width: 2px;"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" height="2" bgcolor="#D1D1D1" style="font-size: 2px; line-height: 2px;"></td>
+                    </tr>
+                  </table></td>
+                <td width="1" bgcolor="#E9E9E9" style="font-size: 1px; line-height: 1px;"></td>
+              </tr>
+              <tr>
+                <td colspan="3" height="1px" bgcolor="#E9E9E9" style="font-size: 1px; font-size:1px; line-height: 1px;"></td>
+              </tr>
+            </table>
+            <div style="font-size:1px; line-height:8px;" class="lhfix">&nbsp;</div>
+            
+            <!-- END: SAVINGS MODULE --> 
+            <!-- START: SAVINGS MODULE --> 
+            <!-- cpnFmtCd = 5 --> 
+            <!-- cpnQualTxt =  -->
+            
+            <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td colspan="3" height="1" bgcolor="#E9E9E9" style="line-height: 1px;"></td>
+              </tr>
+              <tr>
+                <td width="1" bgcolor="#E9E9E9" style="font-size: 1px; line-height: 1px;"></td>
+                <td width="222" bgcolor="#FFFFFF" style="padding-bottom: 2px; padding-top: 2px;" align="center" class="width302"><table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td colspan="3" height="2" bgcolor="#D1D1D1" style="font-size: 2px; line-height: 2px;" class="lhfix"></td>
+                    </tr>
+                    <tr>
+                      <td width="2" bgcolor="#D1D1D1" style="font-size: 1px; line-height: 1px; width: 2px;"></td>
+                      <td width="214" align="center" valign="top" bgcolor="#FFFFFF" style="padding-bottom: 8px;" class="width294"><div style="font-size:8px; line-height:8px;" class="lhfix">&nbsp;</div>
+                        <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="5"></td>
+                            <td width="151" class="width204" style="padding-right:4px;"><table role="Presentation" border="0" cellspacing="0" cellpadding="0" width="147" class="width204">
+                                <tr>
+                                  <td height="117" align="left" valign="top">                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#CC0000; font-size:32px; line-height:34px; font-weight:bold;"><span style="font-size: 18px; vertical-align:12px; line-height:0px;">$</span>5.00<span style="font-size: 20px; color: #CC0000; font-weight: normal;">&nbsp;off</span></div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#000000; font-size:10px; line-height:12px; font-weight:normal;">$5 off $30 any VITAMINS and SUPPLEMENTS</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#565656; font-size:10px; line-height:12px; font-weight:normal;">Redeemable online &amp; in store</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div></td>
+                                </tr>
+                                <tr>
+                                  <td valign="top" align="left"><!-- START: NEW EXPIRE -->
+                                    
+                                    <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                                      <tr> 
+                                        <td align="left" valign="middle" style="padding-right: 5px;" height="14"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/star.png" width="14" alt="" border="0" style="display:block;" /></td>
+                                        <td align="left" valign="middle" height="14" style="font-family: Helvetica, Arial, sans-serif; color:#565656; font-size:10px; line-height:14px; font-weight:normal;"><span style="font-weight: bold; color:#1E1E1E;">NEW!</span>&nbsp; Send to card by 02/04/23</td>
+                                      </tr>
+                                    </table>
+                                    
+                                    <!-- END: NEW EXPIRE --></td>
+                                </tr>
+                                <tr>
+                                  <td align="left" valign="bottom" style="font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 7px; line-height: 9px; padding-top: 6px;">Sequence No: 360058211116</td>
+                                </tr>
+                              </table></td>
+                            <td width="44" valign="middle" align="center" style="border-left: #D1D1D1 dotted 2px;" class="pleft10"> 
+                              <!-- START: SEND TO CARD-->
+                              
+                              <div style="height:auto"> <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUBBWAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-SvcurlL1dAQHm-kmO7jZxZrlLTCet8QCeVLGpGfyJeW_ZI-cTouGlEt71cmpnTFDXI6EtsmzBJXQ-V3jx06uPHALJnfAYH66YnN6uDP4lDo5wnn12b9r0i9QRG5DgLJ_md_ccIz1wimBznZXjdpJToCyxa-hQB2RMn9GGyLalPCkefiUeXa4ase8HKhzX-c6eEBsCjcZu-Jmqj8iSPpwBAqMdpsdzzwRo7G-bGtGyAz9TSBWyllgTqcZvsR8PMhv2NX9rVATVJfLwcS5sXe9lo1wiCTrwIMqDmv_I2cmXwkkw_GEdOXY86yK9c6rXQq8W63VE_Qn8V44UXkqMVR0VOZoDB44SQPtamChEZCCxZnkS-cXp3m-xwDr6tj1gEKRS4WP2HzkbhOCaG1at-LXowGgRi84T-9Q0M-qdJZoCSXzoLqE.&_di_=uu9qr2od8f4e95a6i3kmqgd328ajsjit8kis5jd4ah2e3vnqlg50"> <img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/sendToCard.jpg" width="52" alt="" border="0" style="display:block;" /> </a> </div>
+                              
+                              <!-- END: SEND TO CARD --></td>
+                          </tr>
+                        </table></td>
+                      <td width="2" bgcolor="#D1D1D1" style="font-size: 1px; line-height: 1px; width: 2px;"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" height="2" bgcolor="#D1D1D1" style="font-size: 2px; line-height: 2px;"></td>
+                    </tr>
+                  </table></td>
+                <td width="1" bgcolor="#E9E9E9" style="font-size: 1px; line-height: 1px;"></td>
+              </tr>
+              <tr>
+                <td colspan="3" height="1px" bgcolor="#E9E9E9" style="font-size: 1px; font-size:1px; line-height: 1px;"></td>
+              </tr>
+            </table>
+            <div style="font-size:1px; line-height:8px;" class="lhfix">&nbsp;</div>
+            
+            <!-- END: SAVINGS MODULE --> 
+            <!-- START: SAVINGS MODULE --> 
+            <!-- cpnFmtCd = 5 --> 
+            <!-- cpnQualTxt =  -->
+            
+            <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td colspan="3" height="1" bgcolor="#E9E9E9" style="line-height: 1px;"></td>
+              </tr>
+              <tr>
+                <td width="1" bgcolor="#E9E9E9" style="font-size: 1px; line-height: 1px;"></td>
+                <td width="222" bgcolor="#FFFFFF" style="padding-bottom: 2px; padding-top: 2px;" align="center" class="width302"><table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td colspan="3" height="2" bgcolor="#D1D1D1" style="font-size: 2px; line-height: 2px;" class="lhfix"></td>
+                    </tr>
+                    <tr>
+                      <td width="2" bgcolor="#D1D1D1" style="font-size: 1px; line-height: 1px; width: 2px;"></td>
+                      <td width="214" align="center" valign="top" bgcolor="#FFFFFF" style="padding-bottom: 8px;" class="width294"><div style="font-size:8px; line-height:8px;" class="lhfix">&nbsp;</div>
+                        <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="5"></td>
+                            <td width="151" class="width204" style="padding-right:4px;"><table role="Presentation" border="0" cellspacing="0" cellpadding="0" width="147" class="width204">
+                                <tr>
+                                  <td height="117" align="left" valign="top">                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#CC0000; font-size:32px; line-height:34px; font-weight:bold;"><span style="font-size: 18px; vertical-align:12px; line-height:0px;">$</span>7.00<span style="font-size: 20px; color: #CC0000; font-weight: normal;">&nbsp;off</span></div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#000000; font-size:10px; line-height:12px; font-weight:normal;">$7 off $25 CVS HEALTH Vitamins and Supplements</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#565656; font-size:10px; line-height:12px; font-weight:normal;">Redeemable online &amp; in store</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div></td>
+                                </tr>
+                                <tr>
+                                  <td valign="top" align="left"><!-- START: NEW EXPIRE -->
+                                    
+                                    <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                                      <tr> 
+                                        <td align="left" valign="middle" style="padding-right: 5px;" height="14"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/star.png" width="14" alt="" border="0" style="display:block;" /></td>
+                                        <td align="left" valign="middle" height="14" style="font-family: Helvetica, Arial, sans-serif; color:#565656; font-size:10px; line-height:14px; font-weight:normal;"><span style="font-weight: bold; color:#1E1E1E;">NEW!</span>&nbsp; Send to card by 02/04/23</td>
+                                      </tr>
+                                    </table>
+                                    
+                                    <!-- END: NEW EXPIRE --></td>
+                                </tr>
+                                <tr>
+                                  <td align="left" valign="bottom" style="font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 7px; line-height: 9px; padding-top: 6px;">Sequence No: 359573656998</td>
+                                </tr>
+                              </table></td>
+                            <td width="44" valign="middle" align="center" style="border-left: #D1D1D1 dotted 2px;" class="pleft10"> 
+                              <!-- START: SEND TO CARD-->
+                              
+                              <div style="height:auto"> <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUBBWAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-SvcurlL1dAQHm-kmO7jZxZrlLTCet8QCeVLGpGfyJeW_ZI-cTouGlEt71cmpnTFDXI6EtsmzBJXQ-V3jx06uPHALJnfAYH66YnN6uDP4lDo5wnn12b9r0i9QRG5DgLJ_md_ccIz1wimBznZXjdpJTAHEfHQqiSPVjVO06hIy5FCpYrSD_Qg8RTWbqeyjr6khxRekqQYX_NdD1t99x7-JYefT2LMmQACKpCRganpLWNncqcDyXn61JtUI_KOGQPCHZp3bIVSmiDIUvtZhIU0f2pzMn1LznD_xciRdOwhPToPqx9BRPv9b3NJySvmR_AZxmbyc-qFePbuzDMEpYP84-hOsQhKS_jPOiaiWa6fauX66pkFDVfFgCJOdPPcHm124cM6TQgyxkNC6nbHeoQixku9m6L6hQp5rW6CJOiWSMy3J8G1o.&_di_=k7i6knatqiip0b7ame9l8fjh5fpif4lhtlr3gpmel29ibrrbvs4g"> <img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/sendToCard.jpg" width="52" alt="" border="0" style="display:block;" /> </a> </div>
+                              
+                              <!-- END: SEND TO CARD --></td>
+                          </tr>
+                        </table></td>
+                      <td width="2" bgcolor="#D1D1D1" style="font-size: 1px; line-height: 1px; width: 2px;"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" height="2" bgcolor="#D1D1D1" style="font-size: 2px; line-height: 2px;"></td>
+                    </tr>
+                  </table></td>
+                <td width="1" bgcolor="#E9E9E9" style="font-size: 1px; line-height: 1px;"></td>
+              </tr>
+              <tr>
+                <td colspan="3" height="1px" bgcolor="#E9E9E9" style="font-size: 1px; font-size:1px; line-height: 1px;"></td>
+              </tr>
+            </table>
+            <div style="font-size:1px; line-height:8px;" class="lhfix">&nbsp;</div>
+            
+            <!-- END: SAVINGS MODULE --> 
+            <!-- START: SAVINGS MODULE --> 
+            <!-- cpnFmtCd = 5 --> 
+            <!-- cpnQualTxt =  -->
+            
+            <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td colspan="3" height="1" bgcolor="#E9E9E9" style="line-height: 1px;"></td>
+              </tr>
+              <tr>
+                <td width="1" bgcolor="#E9E9E9" style="font-size: 1px; line-height: 1px;"></td>
+                <td width="222" bgcolor="#FFFFFF" style="padding-bottom: 2px; padding-top: 2px;" align="center" class="width302"><table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td colspan="3" height="2" bgcolor="#D1D1D1" style="font-size: 2px; line-height: 2px;" class="lhfix"></td>
+                    </tr>
+                    <tr>
+                      <td width="2" bgcolor="#D1D1D1" style="font-size: 1px; line-height: 1px; width: 2px;"></td>
+                      <td width="214" align="center" valign="top" bgcolor="#FFFFFF" style="padding-bottom: 8px;" class="width294"><div style="font-size:8px; line-height:8px;" class="lhfix">&nbsp;</div>
+                        <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="5"></td>
+                            <td width="151" class="width204" style="padding-right:4px;"><table role="Presentation" border="0" cellspacing="0" cellpadding="0" width="147" class="width204">
+                                <tr>
+                                  <td height="117" align="left" valign="top">                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#CC0000; font-size:32px; line-height:34px; font-weight:bold;"><span style="font-size: 18px; vertical-align:12px; line-height:0px;">$</span>2.00<span style="font-size: 20px; color: #CC0000; font-weight: normal;">&nbsp;off</span></div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#000000; font-size:10px; line-height:12px; font-weight:normal;">$2 off $10 any TYLENOL or MOTRIN adult Pain Reliever</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div>
+                                    <div style="font-family: Helvetica, Arial, sans-serif; color:#565656; font-size:10px; line-height:12px; font-weight:normal;">Redeemable online &amp; in store</div>
+                                    <div style="line-height:6px;" class="lhfix">&nbsp;</div></td>
+                                </tr>
+                                <tr>
+                                  <td valign="top" align="left"><!-- START: NEW EXPIRE -->
+                                    
+                                    <table role="Presentation" border="0" cellspacing="0" cellpadding="0">
+                                      <tr> 
+                                        <td align="left" valign="middle" style="padding-right: 5px;" height="14"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/star.png" width="14" alt="" border="0" style="display:block;" /></td>
+                                        <td align="left" valign="middle" height="14" style="font-family: Helvetica, Arial, sans-serif; color:#565656; font-size:10px; line-height:14px; font-weight:normal;"><span style="font-weight: bold; color:#1E1E1E;">NEW!</span>&nbsp; Send to card by 02/04/23</td>
+                                      </tr>
+                                    </table>
+                                    
+                                    <!-- END: NEW EXPIRE --></td>
+                                </tr>
+                                <tr>
+                                  <td align="left" valign="bottom" style="font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 7px; line-height: 9px; padding-top: 6px;">Sequence No: 359591403122</td>
+                                </tr>
+                              </table></td>
+                            <td width="44" valign="middle" align="center" style="border-left: #D1D1D1 dotted 2px;" class="pleft10"> 
+                              <!-- START: SEND TO CARD-->
+                              
+                              <div style="height:auto"> <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUBBWAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-SvcurlL1dAQHm-kmO7jZxZrlLTCet8QCeVLGpGfyJeW_ZI-cTouGlEt71cmpnTFDXI6EtsmzBJXQ-V3jx06uPHALJnfAYH66YnN6uDP4lDo5wnn12b9r0i9QRG5DgLJ_md_ccIz1wimBznZXjdpJTMjGjrgLQbToAtSmScY1PxGj6l0th0qcxDfHgjJy3eOL05AmKrWnPL8Jg6e8Z5OUnwntvPxt9NPirsie6N3rD0UyYHgauBzpgewPVynauhDacyXem2yGODm4FLUUPHyz1hJnHfMf4llZRl7s15BYO4g7FoehB88KS_4iqfnw9QmsB3frPpPmuvOdVWz6pDchLA38DrL9R4VjSPMwFFeNhQ9F3Y8DpXWUw5EsCTo-XhiRvI2HyMHWqkAwEaWSyVHHrbPVRlqNpK7Jrjobwh-xmJ1NRd7Y.&_di_=p2f5sibhppbkicc50lvlunfubu427368nfdf60hj24dasvu7sli0"> <img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/sendToCard.jpg" width="52" alt="" border="0" style="display:block;" /> </a> </div>
+                              
+                              <!-- END: SEND TO CARD --></td>
+                          </tr>
+                        </table></td>
+                      <td width="2" bgcolor="#D1D1D1" style="font-size: 1px; line-height: 1px; width: 2px;"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" height="2" bgcolor="#D1D1D1" style="font-size: 2px; line-height: 2px;"></td>
+                    </tr>
+                  </table></td>
+                <td width="1" bgcolor="#E9E9E9" style="font-size: 1px; line-height: 1px;"></td>
+              </tr>
+              <tr>
+                <td colspan="3" height="1px" bgcolor="#E9E9E9" style="font-size: 1px; font-size:1px; line-height: 1px;"></td>
+              </tr>
+            </table>
+            <div style="font-size:1px; line-height:8px;" class="lhfix">&nbsp;</div>
+            
+            <!-- END: SAVINGS MODULE --> 
+ </td>
+        </tr>
+      </table>
+      <div style="line-height:4px;" class="lhfix">&nbsp;</div>
+      
+      <!-- END: SAVINGS AND REWARDS --> 
+      <!-- END: RIGHT COLUMN --> </th>
+  </tr>
+</table>
+
+
+
+    
+	
+    
+        
+    
+    
+        <div class="lhfix">&nbsp;</div>
+<!-- Secondary - 5050 Image -->
+<!-- Headline Smallest -->
+<div style="line-height:20px;" class="lhfix">&nbsp;</div>
+<div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 24px; color: #000000; line-height: 28px; font-weight: bold;" class="bold font20 lh24">More ways to save a little extra</div>
+<div style="line-height:20px;" class="lhfix">&nbsp;</div>
+<!-- /Headline Smallest -->
+    
+        <!-- 5050 Image (Image on Left) -->
+<table cellpadding="0" cellspacing="0" style="width:600px;" class="width300">
+<tr>
+    <td align="center" bgcolor="#ffffff">
+        
+        <!-- Image Mobile -->
+        <!--[if !mso]><!-->
+        <div class="show" style="display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0;">
+            <div><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUCT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=i7omd8ski9qai21nmb0t9tdhedokj948k967u2q15uc5msi79hgg"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/50_50_Lifestyle_mob.png" alt="" width="300" style="display: block; height: auto; border: 0px;" /></a></div>
+        </div>
+        <!--<![endif]-->
+        <!-- /Image Mobile -->
+        
+        <table cellpadding="0" cellspacing="0" style="width:600px;" class="width300">
+        <tr>
+            <td style="width: 300px;" class="hide">
+                
+                <!-- Image Desktop -->
+                <div><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUCT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=i7omd8ski9qai21nmb0t9tdhedokj948k967u2q15uc5msi79hgg"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/50_50_Lifestyle_dt.png" alt="" width="300" style="display: block; height: auto; border: 0px;" /></a></div>
+                <!-- /Image Desktop -->
+                
+            </td>
+            <td style="width: 30px;" aria-hidden="true"></td>
+            <td style="width: 240px;" align="left" valign="middle" class="aligncenter">
+                
+                <!--[if !mso]><!-->
+                <div class="show yahoo-hide" style="display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0;">
+                <div style="line-height:30px;" class="lhfix">&nbsp;</div>
+                </div>
+                <!--<![endif]-->
+                
+                <!-- Headline -->
+                
+                    <h6 style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 24px; color: #000000; line-height: 28px;" class="bold lhfix"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUCT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=i7omd8ski9qai21nmb0t9tdhedokj948k967u2q15uc5msi79hgg" style="text-decoration: none;"><span style="color: #000000; line-height: 24px; text-decoration: none; font-weight: bold;">CarePass<sup>&#174;</sup></span></a></h6>
+<div style="line-height:16px;" class="lhfix">&nbsp;</div>
+
+
+                
+       
+                <!-- /Headline -->
+
+                <!-- Body copy -->
+                <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px;"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUCT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=i7omd8ski9qai21nmb0t9tdhedokj948k967u2q15uc5msi79hgg" style="text-decoration: none;"> <span style="color: #000000; line-height: 24px; text-decoration: none;">Members enjoy 20% off CVS Health<span style='font-size: 10px; vertical-align: 10px; line-height: 0;'>&#174;</span> brand products every day, FREE same-day Rx delivery and more.<br><b>Plus, a $10 monthly promo reward.*</b></span></a></div>
+                <!-- /Body copy -->
+                <!-- Standalone Link -->
+                <div style="line-height:24px;" class="lhfix">&nbsp;</div>
+                <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px; font-weight: 400;" class="bold"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRUCT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=i7omd8ski9qai21nmb0t9tdhedokj948k967u2q15uc5msi79hgg" style="color: #000000; line-height: 24px; text-decoration: none; font-weight: bold;">Try a month of CarePass FREE<img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/arw_large.png" width="11" height="13" alt="" style="display: inline; border: 0px;" /></a></div>
+                <!-- /Standalone Link -->
+
+                    
+                <!--[if !mso]><!-->
+                <div class="show yahoo-hide" style="display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0;">
+                <div style="line-height:30px;" class="lhfix">&nbsp;</div>
+                </div>
+                <!--<![endif]-->
+
+            </td>
+            <td style="width: 30px;" aria-hidden="true"></td>
+        </tr>
+        </table>
+        
+    </td>
+</tr>
+</table>
+<!-- /5050 Image (Image on Left) -->
+        
+        
+    <!-- Secondary - 5050 Image -->
+    
+
+
+
+    
+        
+        
+    
+<div class="lhfix">&nbsp;</div>
+
+<!-- Secondary - 3070 Graphic -->
+
+    
+<!-- 3070 Module -->
+<table cellpadding="0" cellspacing="0" style="width:600px;" class="width300">
+<tr>
+    <th style="width: 180px; font-weight: normal;" align="center" valign="top" bgcolor="#ffffff" class="block width300">
+        
+        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+        
+        <table cellpadding="0" cellspacing="0" style="width: 180px;">
+        <tr>
+            <td style="width: 40px;" aria-hidden="true"></td>
+            <td style="width: 100px;">
+            
+                <!-- Image -->
+                <div><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRWTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=rte3bj0tu0r5ckbakbr7tmhh9lsvfsdtrkiprpgo9fimh5rpg6s0"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/triggered/ereceipt/cvs_ec_digital-receipts_trans_v2/images/PHR.png" width="100" height="auto" alt="" border="0" style="display:block;" /></a></div>
+                <!-- /Image -->
+            
+            </td>
+            <td style="width: 40px;" aria-hidden="true"></td>
+        </tr>
+        </table>
+        
+    </th>
+    <th style="width: 420px; font-weight: normal;" align="center" valign="top" bgcolor="#ffffff" class="block width300">
+        
+        <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="width: 0px;" class="width30" aria-hidden="true"></td>
+            <td style="width: 380px;" align="left" class="aligncenter width240">
+                
+            
+                <div style="line-height:40px;" class="lhfix lh20">&nbsp;</div>
+                
+                <!-- Headline Smallest -->
+                <h6 style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 24px; color: #000000; line-height: 28px;" class="bold font20 lh24"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRWTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=rte3bj0tu0r5ckbakbr7tmhh9lsvfsdtrkiprpgo9fimh5rpg6s0" style="text-decoration: none;"><span style="color: #000000; line-height: 28px; text-decoration: none; font-weight: bold;" class="lh24">ExtraCare Pharmacy & Health Rewards<sup>&reg;</sup></span></a></h6>
+                <div style="line-height:8px;" class="lhfix">&nbsp;</div>
+                <!-- /Headline Smallest -->
+
+                <!-- Body copy -->
+                <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px;"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRWTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=rte3bj0tu0r5ckbakbr7tmhh9lsvfsdtrkiprpgo9fimh5rpg6s0" style="text-decoration: none;"><span style="color: #000000; line-height: 24px; text-decoration: none;">Earn up to $50 ExtraBucks Rewards<span style='font-size: 10px; vertical-align: 10px; line-height: 0;'>&#174;</span> a year for filling prescriptions, getting vaccinations and more.* Enroll everyone in your family (including pets).</span></a></div>
+                <!-- /Body copy -->
+                
+                <!-- Standalone Link -->
+                <div style="line-height:24px;" class="lhfix">&nbsp;</div>
+                <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px;ß" class="bold"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRWTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=rte3bj0tu0r5ckbakbr7tmhh9lsvfsdtrkiprpgo9fimh5rpg6s0" style="text-decoration: none;"><span style="color: #000000; line-height: 24px; text-decoration: none; font-weight: bold;">Join ExtraCare Pharmacy & Health Rewards<img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/arw_large.png" width="11" height="13" alt="" style="display: inline; border: 0px;" /></span></a></div>
+                <!-- /Standalone Link -->
+                
+                <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+                
+            </td>
+            <td style="width: 40px;" class="width30" aria-hidden="true"></td>
+        </tr>
+        </table>
+        
+    </th>
+</tr>
+</table>
+<!-- /3070 Module -->
+<!-- /Secondary - 3070 Graphic -->
+    
+
+
+<br>
+
+    
+
+    
+    
+        <style type="text/css">
+    .footersup {font-size: 10px; vertical-align: 8px; line-height: 0;}
+.footersup2 {font-size: 10px; vertical-align: 4px; line-height: 0;}
+</style>
+        
+    <!-- Footer - Default -->
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320" bgcolor="#F2F2F2" role="presentation">
+<tr>
+    <td style="width: 20px;" class="width10" valign="bottom" aria-hidden="true">
+        <table cellpadding="0" cellspacing="0"><tr><td style="width: 20px; height: 190px;" height="190" class="width10" bgcolor="#cc0000" role="presentation"></td></tr></table>
+    </td>
+    <td style="width: 600px;" class="width300" align="center" valign="bottom">
+        
+                
+        <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="width: 600px;" align="center" valign="middle" bgcolor="#ffffff" class="width300">
+                <table cellpadding="0" cellspacing="0" style="width: 560px;" class="width300" role="presentation">
+                <tr>
+                    <th style="width: 186px; font-weight:normal;" align="center" valign="top" class="block width300">
+
+                        <!-- Footer Link 1 -->
+                        <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width: 186px;" align="center" valign="middle" class="width300">
+                                <div style="line-height:24px;" class="lhfix">&nbsp;</div>
+                                <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px; font-weight: bold;" class="bold"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRWAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=kgus8sverjg2nk1j2tvp9a8u2q3sk43m0ir6oke6v6hl7kq392gg" style="color: #000000; line-height: 24px; text-decoration: none;">Pharmacy</a><span class="footersup">&nbsp;</span></div>
+                                <div style="line-height:40px;" class="lhfix lh24">&nbsp;</div>
+                            </td>
+                        </tr>
+                        </table>
+                        <!-- /Footer Link 1 -->
+
+                    </th>
+                    <th style="width: 1px; font-weight:normal;" align="center" valign="top" class="block width300" aria-hidden="true">
+                        <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width: 1px; height: 1px;" align="center" valign="top" bgcolor="#ffffff" class="width260 height2 bggray"></td>
+                        </tr>
+                        </table>
+                    </th>
+                    <th style="width: 186px; font-weight:normal;" align="center" valign="top" class="block width300">
+
+                        <!-- Footer Link 2 -->
+                        <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width: 186px;" align="center" valign="middle" class="width300">
+                                <div style="line-height:24px;" class="lhfix">&nbsp;</div>
+                                <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px; font-weight: bold;" class="bold"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRWCT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=6pnh51p6klho31vbue1ob805qf10ef30tfo4a9l1u15n7558sa8g" style="color: #000000; line-height: 24px; text-decoration: none;">MinuteClinic<span class="footersup">&#174;</span> <br/>&amp; Telehealth</a></div>
+                                <div style="line-height:40px;" class="lhfix lh24">&nbsp;</div>
+                            </td>
+                        </tr>
+                        </table>
+                        <!-- /Footer Link 2 -->
+
+                    </th>
+                    <th style="width: 1px; font-weight:normal;" align="center" valign="top" class="block width300" aria-hidden="true">
+                        <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width: 1px; height: 1px;" align="center" valign="top" bgcolor="#ffffff" class="width260 height2 bggray"></td>
+                        </tr>
+                        </table>
+                    </th>
+                    <th style="width: 186px; font-weight:normal;" align="center" valign="top" class="block width300">
+
+                        <!-- Footer Link 3 -->
+                        <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width: 186px;" align="center" valign="middle" class="width300">
+                                <div style="line-height:24px;" class="lhfix">&nbsp;</div>
+                                <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px; font-weight: bold;" class="bold"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRYRT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=ked69nt4v8i967td3l9eomlrjn11qe3a2defitrm1eim7bc2lhvg" style="color: #000000; line-height: 24px; text-decoration: none;">Shop CVS.com<span class="footersup">&#174;</span></a></div>
+                                <div style="line-height:40px;" class="lhfix lh24">&nbsp;</div>
+                            </td>
+                        </tr>
+                        </table>
+
+
+
+
+
+                        <!-- /Footer Link 3 -->
+
+                    </th>
+                </tr>
+                </table>
+            </td>
+        </tr>
+        </table>
+        <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="width: 600px; height: 110px;" height="110" align="center" valign="top" bgcolor="#cc0000" class="width300">
+                <div style="line-height:40px;" class="lhfix">&nbsp;</div>
+
+                <!-- Share links -->
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRYTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=70jaeaauveigt4qsdljph4mapm8en4n60t9r99vje2jt0rcafa10"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/share_fb.png" width="30" height="30" alt="Like us on Facebook &gt;" style="display: block; border: 0px;" /></a></td>
+                    <td style="width: 40px;" aria-hidden="true"></td>
+                    <td><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRYWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=i56vt5usr6846655dnr2r3s0hohs95hgrs9bmjhrvnud4567s00g"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/share_tw.png" width="30" height="30" alt="Follow us on Twitter &gt;" style="display: block; border: 0px;" /></a></td>
+                    <td style="width: 40px;" aria-hidden="true"></td>
+                    <td><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRYAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=p4dsr882lh33d3viban9rndshb1vqgoco04isjeucrr6osoqolp0"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/share_yt.png" width="30" height="30" alt="Check out our YouTube channel &gt;" style="display: block; border: 0px;" /></a></td>
+                </tr>
+                </table>
+                <!-- /Share links -->
+
+            </td>
+        </tr>
+        </table>
+    </td>
+    <td style="width: 20px;" class="width10" valign="bottom" aria-hidden="true">
+        <table cellpadding="0" cellspacing="0"><tr><td style="width: 20px; height: 190px;" height="190" class="width10" bgcolor="#cc0000"></td></tr></table>
+    </td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320" bgcolor="#ffffff" role="presentation">
+<tr>
+    <td style="width: 40px;" class="width20" aria-hidden="true"></td>
+    <td style="width: 560px;" align="left" valign="top" class="width280">
+    
+        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+        <table cellpadding="0" cellspacing="0" style="width: 560px;" class="width280" role="presentation">
+        <tr>
+            <th style="width: 280px; font-weight:normal;" align="left" valign="top" class="block">
+                
+                <!-- View Online -->
+                <table cellpadding="0" cellspacing="0" role="presentation">
+                <tr>
+    <td style="width: 280px;" align="left" valign="top" class="aligncenter"><div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;">Having trouble viewing this email?<br /><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRYCT&_ei_=EOwPQ42l-mBFJGD0ZPxQdvl1iigbQEiYllg72h2r9q3rO51x-yj0sH9I3JD6iTTn7kLHaIzNkJ7ESjInhIv9Q4Q2kVdfn_qbSMNUIqSoADNzQ0kCNoXavZDAoiMf2uhhNi1B3gMpmtF5rbkmXdQdMoQZYSz7_TDHK89Q29XDkV6bVmKI2PJEiN4-6tlgoNAe5z_gjmVNBJ-CZmIStRfUanhyrzSelcDX51kQHl58WXPC8t-UZFsCsZHD_u9mFx80kyskvdmKpEiVk5PS7EdIFiVPE4dKd_ul4OYsyrLcGlt_hnJMHOhOnP6Ja1Watr2W8896x5rPqD8qR_D3qkDoLVPhqpkX5NNn5hfpDSusjEQVqPVWekTZnVXkvJSdNSL1x5EIjaU4aSaB9rskB4YBSczTNHDd5P-8NVsNTd6xgTx85kXxieDHLdCy7iXW2GLzzL7HJq9_NPtmOeeR7SysRuypKxBS7lBulWlkA95ORQuTKda22YIZB_mc9E8SkuXCpqpCyi0YllWxI5Daq8ksvzHek2iYyn4EJuOCbMwMvirI_2ND1nyjRW6ELNP7VrmSNyNcWqBEveqhDvAmEYZYlpBSEArnb-CkM42Iv2OcnkfVKjWgUylvaTo34WlTPQyzEIdSHzRSXESQkkkXrC3y8kCu9-ieEE6raxvRjHskViA07rQ.&_di_=s6lfom8buvq5fkpu5m7v7bgrsfd86ucm670oukebd0qqasl6v73g" style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; text-decoration: underline; font-weight: bold;" class="bold">View online</a></div></td>
+                </tr>
+                </table>
+                <div style="line-height:16px;" class="lhfix">&nbsp;</div>
+                <!-- /View Online -->
+                
+            </th>
+            <th style="width: 280px; font-weight:normal;" align="right" valign="top" class="block">
+                
+                <!-- Member Info -->
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 280px;" align="right" valign="top" class="aligncenter"><div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;">ExtraCare<span class="footersup2">&#174;</span> Member: Starky<br /></div></td>
+                </tr>
+                </table>
+                <div style="line-height:16px;" class="lhfix hide">&nbsp;</div>
+                <div style="line-height:8px;" class="lhfix">&nbsp;</div>
+                <!-- /Member Info -->
+
+                
+            </th>
+        </tr>
+        </table>
+        
+        <!-- Rescue Links -->
+        <table cellpadding="0" cellspacing="0" style="width: 560px;" class="width280" role="presentation">
+        <tr>
+            <th style="width: 102px; font-weight:normal;" align="right" valign="top" class="block width280">
+                
+                <!-- Rescue Link 1 -->
+                <table cellpadding="0" cellspacing="0" role="presentation">
+                <tr>
+                    <td style="width: 102px; padding-top: 0px; padding-bottom: 0px;" align="left" class="width280 aligncenter pad16"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRART&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=vbmf5a40i0172l8pag4dj4bnul83ogudcktokilu503i5fv3u9i0" style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; text-decoration: none; font-weight: bold;" class="bold">Clinic Locator</a></td>
+                </tr>
+                </table>
+                <!-- /Rescue Link 1 -->
+                
+            </th>
+            <th style="width: 2px; font-weight:normal;" align="center" valign="top" class="block width280">
+                <div style="line-height:2px;" class="lhfix hide">&nbsp;</div>
+                <table cellpadding="0" cellspacing="0"><tr><td style="width: 2px; height: 12px; line-height: 12px;" height="12" bgcolor="#F2F2F2" class="width260 height2 lh2"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+            </th>
+            <th style="width: 133px; font-weight:normal;" align="right" valign="top" class="block width280">
+                
+                <!-- Rescue Link 2 -->
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 133px; padding-top: 0px; padding-bottom: 0px;" align="center" class="width280 pad16"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRATT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=gp9q5c787o9h532d6j1lom6adka42s8jbjlt8dfcitp9675bh0kg" style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; text-decoration: none; font-weight: bold;" class="bold">Telehealth</a></td>
+                </tr>
+                </table>
+                <!-- /Rescue Link 2 -->
+                
+            </th>
+            <th style="width: 2px; font-weight:normal;" align="center" valign="top" class="block width280" >
+                <div style="line-height:2px;" class="lhfix hide">&nbsp;</div>
+                <table cellpadding="0" cellspacing="0"><tr><td style="width: 2px; height: 12px; line-height: 12px;" height="12" bgcolor="#F2F2F2" class="width260 height2 lh2"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+            </th>
+            <th style="width: 110px; font-weight:normal;" align="right" valign="top" class="block width280">
+                
+                <!-- Rescue Link 3 -->
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 110px; padding-top: 0px; padding-bottom: 0px;" align="center" class="width280 pad16"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRAWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=solb6i24rg0991isotmcm6309g487niqck3mqtbkv6d5636talpg" style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; text-decoration: none; font-weight: bold;" class="bold">Weekly ad</a></td>
+                </tr>
+                </table>
+                <!-- /Rescue Link 3 -->
+                
+            </th>
+            <th style="width: 2px; font-weight:normal;" align="center" valign="top" class="block width280">
+                <div style="line-height:2px;" class="lhfix hide">&nbsp;</div>
+                <table cellpadding="0" cellspacing="0"><tr><td style="width: 2px; height: 12px; line-height: 12px;" height="12" bgcolor="#F2F2F2" class="width260 height2 lh2"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+            </th>
+            <th style="width: 114px; font-weight:normal;" align="right" valign="top" class="block width280">
+                
+                <!-- Rescue Link 4 -->
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 114px; padding-top: 0px; padding-bottom: 0px;" align="center" class="width280 pad16"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRAAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=ja7ia96nleneu8ta9i1u9a82kk6d93gqig7t7l91fubj5tfjt1rg" style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; text-decoration: none; font-weight: bold;" class="bold">ExtraCare<span class="footersup2">&#174;</span></a></td>
+                </tr>
+                </table>
+                <!-- /Rescue Link 4 -->
+                
+            </th>
+            <th style="width: 2px; font-weight:normal;" align="center" valign="top" class="block width280">
+                <div style="line-height:2px;" class="lhfix hide">&nbsp;</div>
+                <table cellpadding="0" cellspacing="0"><tr><td style="width: 2px; height: 12px; line-height: 12px;" height="12" bgcolor="#F2F2F2" class="width260 height2 lh2"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+            </th>
+            <th style="width: 93px; font-weight:normal;" align="right" valign="top" class="block width280">
+                
+                <!-- Rescue Link 5 -->
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 93px; padding-top: 0px; padding-bottom: 0px;" align="right" class="width280 aligncenter pad16"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRWWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=m7b6cql10egk1kq92nj8og1so5l5geeairbn9ttj8h0l0pc9jdmg" style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; text-decoration: none; font-weight: bold;" class="bold">My account</a></td>
+                </tr>
+                </table>
+                <!-- /Rescue Link 5 -->
+                
+            </th>
+        </tr>
+        </table>
+        <!-- /Rescue Links -->
+        
+        <div style="line-height:27px;" class="lhfix hide">&nbsp;</div>
+        <table cellpadding="0" cellspacing="0" style="width: 560px;" class="width280" role="presentation"><tr><td style="width: 560px; height: 2px; line-height: 2px;" height="2" bgcolor="#F2F2F2" class="width280"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+        <div style="line-height:29px;" class="lhfix">&nbsp;</div>
+        
+        <!-- Legal/Disclaimer -->
+        <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;">
+            
+            <!-- FROM ADDERSS LINE -->
+            Add <a class="appleLinksBlack" style="color: #000000; line-height: 20px; text-decoration: none;" href="mailto:CVSPharmacy@pharmacy.cvs.com"><span style="text-decoration: underline;">CVSPharmacy@pharmacy.cvs.com</span></a> to your address book to continue receiving our&nbsp;emails.<br /><br />
+            <!-- /FROM ADDERSS LINE -->
+            
+            
+            
+            
+            
+                    
+            
+            View our <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRACT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=vc6bnavmodjagrhabbrjq4a1sps0esui77avl5rb9codqbv7uht0" style="color: #000000; line-height: 20px; text-decoration: underline;">Privacy Policy</a>. For ExtraCare<span class="sup">&reg;</span> members, view the <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRBRT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=fcecv2oh93eded9jcjovoun8l28cl0udrdc12r44q048tmtpa9ig" style="color: #000000; line-height: 20px; text-decoration: underline;">ExtraCare Program Terms & Conditions</a>. <br/><br/>
+            
+            
+            You are receiving this email because you indicated you wanted digital receipts from CVS Pharmacy<span class="footersup2">&#174;</span>. To update your digital receipt preferences, please log in to your CVS.com account and visit the communication settings page. If you no longer wish to receive other future emails from us, you can <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRBTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=cjeqs9rnh24plgaigojaes8j4oqadr6uu1m7n5rlll2u88sj9v2g" style="color: #000000; line-height: 20px; text-decoration: underline;">unsubscribe</a> or <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRBWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=e8s7mqfounn78lvk3ufcr0rtb5q2t8kbhjmlvjl6ljkvrtp2kls0" style="color: #000000; line-height: 20px; text-decoration: underline;">update your email preferences</a>, call <a href="Tel: 1-800-746-7287" class="appleLinksBlack" style="color: #000000; line-height: 20px; text-decoration: underline;">1-800-746-7287</a> or mail us at Customer Relations, One CVS Drive, Woonsocket, RI 02895.<br/><br/>
+            
+            
+          
+            Please do not reply to this email. For questions unrelated to your email preferences, contact us by calling <a href="Tel: 1-800-746-7287" class="appleLinksBlack" style="color: #000000; line-height: 20px; text-decoration: underline;">1-800-746-7287</a> or through our <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRBAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=u79k49je1n043i0ljef0vosh2jcca2m9mmv44dstdi98qktagsv0" style="color: #000000; line-height: 20px; text-decoration: underline;">Customer Service&nbsp;page</a><br /><br /Privacy Policy>
+            Have feedback? <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRBCT&_ei_=EOmkUZW4afLiQf-C34V16fkRd_4ZLcKwmBltCebzCJcRsWdAdtDiWGEwuPJqHBKXt11JTfvndwNWRIm0_v-bHeHva-b3zGNiJn7vDYqVHQyecFSPyHX-dk2PhUxkPy2NJypSgmh1YxooWhHHqo1IwBvCx-qihSftluFgngYWN-vbrGR4IQHvCU1S11o69xhGB3HBxTIzVZUo4tp2uKqE5eSVdXNPPXQaz1ogLzTR6kJLugo1QI629C8j6S329tA0vuv4r5OPaTaEP-p8dIHEjQVQ6KvXnTwwJ08jlsQ8yxdnXXH6MZUz-NRKlpQIw_G4SzXx66RuD814yj6jJvgxRgmMtSEBhHAhqsO-fRJTPo9PIs52NLgAnGao5uXWP_H4fw.&_di_=h3fji2rt90muj0bfa75a3cr3acjtkm2097ldvvbi96c9nua42u6g" style="color: #000000; line-height: 20px; text-decoration: underline;">Rate this email</a>.<br /><br />
+        </div>
+        
+        <!-- FOOTER LOGO -->
+        <div><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRCRT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=0hfevk9fu29lreo1tj67tgnqjdut43dp2pn5jjc9mcuue2818lng"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/CVS_Pharmacy_footer_logo.png" alt="CVS pharmacy&reg;" width="230" height="30" style="display: block; border: 0px;" /></a></div>
+        <!-- /FOOTER LOGO -->
+            
+        <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;">      
+            <div style="line-height:10px;" class="lhfix">&nbsp;</div>
+            &copy; 2023 CVS Pharmacy, Inc.<br />
+            <a class="appleLinksBlack" style="color: #000000; line-height: 20px; text-decoration: none;">One CVS Drive, Woonsocket, RI 02895</a>
+        </div>
+        <!-- /Legal/Disclaimer -->
+        
+        <div style="line-height:40px;" class="lhfix">&nbsp;</div>
+    </td>
+    <td style="width: 40px;" class="width20" aria-hidden="true"></td>
+</tr>
+</table>
+<!-- /Footer - Receipt -->
+
+        
+    
+    
+
+
+    
+
+    
+    
+<!-- Disclaimer -->
+
+<div style="line-height:27px;" class="lhfix hide">&nbsp;</div>
+        <table cellpadding="0" cellspacing="0" style="width: 560px;" class="width280" role="presentation"><tr><td style="width: 560px; height: 2px; line-height: 2px;" height="2" bgcolor="#F2F2F2" class="width280"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+        
+        <!-- Legal/Disclaimer -->
+        <table cellpadding="0" cellspacing="0" style="width:600px;" class="width300">
+<tr>
+    <th style="width: 420px; font-weight: normal;" align="center" valign="top" class="block width300">
+        <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="width: 600px;" align="left" class="aligncenter width300">
+                <!-- Body copy -->
+                <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px;" class="hide">
+*FOR CAREPASS: Visit <b><a href='https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRCWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=5t7047v8opak9alt8m67neamk1hta6pav7ccs3nkeaqp5vi2ksd0' style='text-decoration:underline; color: #000000;' target='_blank'>CVS.com/Carepass/Join</a></b> for details.<br /><br />
+*FOR EXTRACARE PHARMACY & HEALTH REWARDS: You must enroll in both the ExtraCare<span style='font-size: 10px; vertical-align: 10px; line-height: 0;'>&#174;</span> and ExtraCare Pharmacy & Health Rewards<span style='font-size: 10px; vertical-align: 10px; line-height: 0;'>&#174;</span> program to earn Pharmacy & Health ExtraBucks Rewards<span style='font-size: 10px; vertical-align: 10px; line-height: 0;'>&#174;</span>. An individual can earn up to $50 in Pharmacy & Health ExtraBucks Rewards in a calendar year in connection with the program. <b><a href='https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRCAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=ihl72vj3mfmkro9pqsgjc6kq5ppi09l7sepftemkpllkoncpfcng' style='text-decoration:underline; color: #000000;' target='_blank'>See program rules for details</a></b> or ask a CVS<span style='font-size: 10px; vertical-align: 10px; line-height: 0;'>&#174;</span> pharmacist for a copy. Rewards cannot be earned on any prescriptions purchased in AR, NJ or NY; any prescriptions transferred to a CVS Pharmacy<span style='font-size: 10px; vertical-align: 10px; line-height: 0;'>&#174;</span> in AL, MS or OR; any controlled substance prescriptions purchased in HI or LA; or where otherwise prohibited by law. CVS Pharmacy reserves the right to modify or terminate the ExtraCare Pharmacy & Health Rewards program.<br /><br />
+
+
+
+
+
+
+
+
+                </div>
+                
+                <!-- disclaimer Mobile -->
+        <!--[if !mso]><!-->
+        <div class="show" style="display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0;">
+            <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px;">
+                
+        <div style="line-height:29px;" class="lhfix">&nbsp;</div>
+            *FOR CAREPASS: Visit <b><a href='https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRCWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=5t7047v8opak9alt8m67neamk1hta6pav7ccs3nkeaqp5vi2ksd0' style='text-decoration:underline; color: #000000;' target='_blank'>CVS.com/Carepass/Join</a></b> for details.<br /><br />            *FOR EXTRACARE PHARMACY & HEALTH REWARDS: You must enroll in both the ExtraCare<span style='font-size: 10px; vertical-align: 10px; line-height: 0;'>&#174;</span> and ExtraCare Pharmacy & Health Rewards<span style='font-size: 10px; vertical-align: 10px; line-height: 0;'>&#174;</span> program to earn Pharmacy & Health ExtraBucks Rewards<span style='font-size: 10px; vertical-align: 10px; line-height: 0;'>&#174;</span>. An individual can earn up to $50 in Pharmacy & Health ExtraBucks Rewards in a calendar year in connection with the program. <b><a href='https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG5gzeH9dzbldBbtjLel70zbcrNGABtyUggzgFmzbTtBtrngsM5sRDa4hS7aJVXtpKX%3DWSUYRCAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQZ_A3OXcpsCvGhAaR9qfMCXqK1eozeAYXWS2RpNwXoDuaSU8NCmjOALywG40U7yStAoHaQAkmMXxjV5di-mGkOtylYOZLqbiHufICahluEAslEOle52A9jF0JczkWOOTZZLAkZE9COfHsTDGuL3zIX4rpol0WVb-AMGoR2NBKh9KC6rM3QqqAs7PufYcDDP6-qSFuL-7cfwoFyTWrW_Z7t_93-7dgoxHeXqluK0tw943pDyP0mdsTEeHmPQli2cuyTRqqn4W49fjbsjyOUrXiX_T9dXCy_TsaHAmnOd63oKbcC8btIhmN9_Ag4YU5Y0.&_di_=ihl72vj3mfmkro9pqsgjc6kq5ppi09l7sepftemkpllkoncpfcng' style='text-decoration:underline; color: #000000;' target='_blank'>See program rules for details</a></b> or ask a CVS<span style='font-size: 10px; vertical-align: 10px; line-height: 0;'>&#174;</span> pharmacist for a copy. Rewards cannot be earned on any prescriptions purchased in AR, NJ or NY; any prescriptions transferred to a CVS Pharmacy<span style='font-size: 10px; vertical-align: 10px; line-height: 0;'>&#174;</span> in AL, MS or OR; any controlled substance prescriptions purchased in HI or LA; or where otherwise prohibited by law. CVS Pharmacy reserves the right to modify or terminate the ExtraCare Pharmacy & Health Rewards program.<br /><br />                                                                                                        </div>
+            
+        </div>
+        <!--<![endif]-->
+        <!-- /disclaimer Mobile -->
+                
+            </td>
+            
+        </tr>
+        </table>
+        
+    </th>
+</tr>
+</table>
+            
+
+
+
+</td></tr></table>  
+</td></tr></table>
+<!-- Container -->
+
+
+    
+
+</center>
+</body>
+</html>
+
